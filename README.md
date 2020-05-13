@@ -1,2 +1,42 @@
 # predicting-response-to-tweets
-This repository contains code, data and results for a research article
+This repository contains code, data and results for a research article entitled:
+
+"Predicting responses to tweets from the official @USNavy account"
+
+1 University of Central Florida, Department of Industrial Engineering & Management Systems, Orlando, Florida, USA </br>
+
+In due course full description of usage will appear here.
+
+The code is written in Python3 and requires GPU computing machine for achieving reasonable performance.
+
+The whole repository is published under MIT License (please refer to the [License file](https://github.com/krzysztoffiok/predicting-response-to-tweets/blob/master/LICENSE)).
+
+## Example results
+
+
+## Installation if you wish to try our code locally:
+Please clone this repository and carry out all computation yourself or extract zipped files downloaded from "release" section to use tweet embeddings computed in our work.
+
+## How the code works:
+You start with a data set of 4498 tweets (file is completely anonymized) which were previously filtered from all tweets pulished by the account in question after year 2016. There task is to predict response (likes, replies, retweets) to tweets based on unstructured tweet text and structured tweet data. Since precise prediction of response (regression) is an extremely difficult task, it was decided to address a simpler classification task with 3 classess aggregating the amount of response into "small", "moderate" and "high".
+
+Steps for full reproduction of our results:
+Step 1: prepare tweets
+In order to carry out this step run prepare_tweets.ipynb. This file will filter, label and divide data into 5 cross validated folds.
+
+Step 2: train Deep Learning Language Models and embed tweet text with trained models
+Execute bash script by: bash ./grid_train to call many times model_train.py in a specified manner. This script will train all 4 models in all configurations (5 folds) and all 3 target variables, 60 training runs altogether.
+
+Next, execute bash scripty by: bash ./grid_embed to call many times embed_sentences_flair.py in a specified manner. This script will create vector representations of tweet text (embeddings) by all trained language models in all folds and for all target variables.
+
+For training of Deep Learning Language Models(DLLMs) and embedding tweet text we utilize [Flair](https://github.com/flairNLP/flair)
+
+Step 3: machine learning prediction of response to tweets
+TODO ...
+
+## Acknowledgment
+This research was carried out as part of the N000141812559 ONR research grant.
+
+## Citation:<br/>
+If you decide to use here published code or our dataset please cite our work in the following manner:
+(please contact us directly at this time since the paper is still in preparation).
