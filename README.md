@@ -13,6 +13,7 @@ The whole repository is published under MIT License (please refer to the [Licens
 
 ## Example results
 
+TODO
 
 ## Installation if you wish to try our code locally:
 Please clone this repository and carry out all computation yourself or extract zipped files downloaded from "release" section to use tweet embeddings computed in our work.
@@ -32,7 +33,16 @@ Next, execute bash scripty by: bash ./grid_embed to call many times embed_senten
 For training of Deep Learning Language Models(DLLMs) and embedding tweet text we utilize [Flair](https://github.com/flairNLP/flair)
 
 Step 3: machine learning prediction of response to tweets
-TODO ...
+To repeat experiments carried out in our work please run bash scripts:
+bash ./grid_predict
+bash ./grid_predict_mixed_features
+The first script uses machine_learning.py to carry out ML predictions for single language model features. The second script uses machine_learning.py to mix language model+structured features and do ML predictions.
+
+Step 4: SHAP explanations
+Our work utilizes [SHapley Additive exPlanations (SHAP)](https://github.com/slundberg/shap) for computing explanations of machine learning models.
+If you wish to compute model explanations, please use the machine_learning.py file with commands described in the file, for example:
+python3 machine_learning.py --target=likes --estimators=2 --language_model=structured  --ml_model=XBG --estimators=2 \
+--mixed_features --shap_out
 
 ## Acknowledgment
 This research was carried out as part of the N000141812559 ONR research grant.
