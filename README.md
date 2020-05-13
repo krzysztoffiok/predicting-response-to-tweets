@@ -27,9 +27,7 @@ In order to carry out this step run prepare_tweets.ipynb. This file will filter,
 Step 2: train Deep Learning Language Models and embed tweet text with trained models
 Execute bash script by: bash ./grid_train to call many times model_train.py in a specified manner. This script will train all 4 models in all configurations (5 folds) and all 3 target variables, 60 training runs altogether.
 
-Next, execute bash scripty by: bash ./grid_embed to call many times embed_sentences_flair.py in a specified manner. This script will create vector representations of tweet text (embeddings) by all trained language models in all folds and for all target variables.
-
-For training of Deep Learning Language Models(DLLMs) and embedding tweet text we utilize [Flair](https://github.com/flairNLP/flair)
+Next, execute bash scripty by: bash ./grid_embed to call many times embed_sentences_flair.py in a specified manner. This script will create vector representations of tweet text (embeddings) by all trained language models in all folds and for all target variables. For training of Deep Learning Language Models(DLLMs) and embedding tweet text we utilize [Flair](https://github.com/flairNLP/flair).
 
 Step 3: machine learning prediction of response to tweets
 To repeat experiments carried out in our work please run bash scripts:
