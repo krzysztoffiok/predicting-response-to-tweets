@@ -34,7 +34,7 @@ Next, execute bash scripty by: "bash ./grid_embed" to call many times embed_sent
 To repeat experiments carried out in our work please run bash scripts:
 "bash ./grid_predict"
 "bash ./grid_predict_mixed_features"
-The first script uses machine_learning.py to carry out ML predictions for single language model features. The second script uses machine_learning.py to mix language model+structured features and do ML predictions.
+The first script uses machine_learning.py to carry out ML predictions for single language model features. The second script uses machine_learning.py to mix language model+structured features and do ML predictions. Computed predictions and metric scores are stored in results folder.
 
 <strong>Step 4: SHAP explanations</strong>
 Our work utilizes [SHapley Additive exPlanations (SHAP)](https://github.com/slundberg/shap) for computing explanations of machine learning models.
