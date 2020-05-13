@@ -14,11 +14,11 @@ The whole repository is published under MIT License (please refer to the [Licens
 
 TODO
 
-## Installation if you wish to try our code locally:
+## Installation if you wish to try our code:
 Please clone this repository and carry out all computation yourself or extract zipped files downloaded from "release" section to use tweet embeddings computed in our work.
 
 ## How the code works:
-You start with a data set of 4498 tweets (file is completely anonymized) which were previously filtered from all tweets pulished by the account in question after year 2016. There task is to predict response (likes, replies, retweets) to tweets based on unstructured tweet text and structured tweet data. Since precise prediction of response (regression) is an extremely difficult task, it was decided to address a simpler classification task with 3 classess aggregating the amount of response into "small", "moderate" and "high".
+You start with a data set of 4498 tweets (file is completely anonymized) which were previously filtered from all tweets pulished by the account in question after year 2016. The task is to predict response (likes, replies, retweets) to tweets based on unstructured tweet text and structured tweet data. Since precise prediction of response (regression) is an extremely difficult task, it was decided to address a simpler classification task with 3 classess aggregating the amount of response into "small", "moderate" and "high".
 
 Steps for full reproduction of our results:
 Step 1: prepare tweets
