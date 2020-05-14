@@ -1,0 +1,13 @@
+declare -a targets=('retweets' 'likes' 'replies')
+declare -a language_models=('fasttext' 'glove' 'distilbert' 'roberta')
+
+
+for i in "${targets[@]}"; do \
+    for b in "${language_models[@]}"; do \
+        python3 machine_learning.py --target="$i" --language_model="$b"  --mixed_features\
+ --ml_model=all --estimators=250;
+
+done;
+done
+
+

@@ -1,0 +1,8 @@
+declare -a targets=('retweets' 'likes' 'replies')
+
+for i in "${targets[@]}"; do python3 machine_learning.py --target="$i" \
+--language_model=all --ml_model=all --estimators=250;
+
+done
+
+

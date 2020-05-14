@@ -1,0 +1,7 @@
+declare -a model=('retweets' 'likes' 'replies')
+declare -a test_run=('fasttext' 'glove' 'distilbert' 'roberta')
+
+for i in "${model[@]}"; do for j in "${test_run[@]}"; do python3 model_train.py --test_run="$j" --model="$i";
+
+done;
+done

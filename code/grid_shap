@@ -1,0 +1,9 @@
+declare -a targets=('retweets' 'likes' 'replies')
+declare -a language_models=('fasttext' 'glove' 'distilbert' 'roberta' 'structured')
+
+for i in "${targets[@]}"; do python3 machine_learning.py --target="$i" \
+--language_model=structured --ml_model=all --estimators=250 --shap_out;
+
+done
+
+

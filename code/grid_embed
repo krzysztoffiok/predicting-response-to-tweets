@@ -1,0 +1,9 @@
+declare -a model=('retweets' 'likes' 'replies')
+declare -a test_run=('fasttext' 'glove' 'distilbert' 'roberta')
+
+for i in "${model[@]}"; do for j in "${test_run[@]}"; do for z in {0..4}; do
+ python3 embed_sentences_flair.py --test_run="$j" --model="$i" --fold=$z;
+
+done;
+done;
+done
