@@ -12,7 +12,40 @@ The whole repository is published under MIT License (please refer to the [Licens
 
 ## Example results
 
-TODO
+Mean F1 micro scores for 3 target variables: Replies, Likes, Retweets, for 3 machine learning classifiers: Ridge (R), Random Forest (RF) and XGBoost (GB), for structured features (feature group I), features extracted by Deep Learning Feature Extraction (feature group II) carried out with use of [Flair framework](https://github.com/flairNLP/flair)  with selected Langualge Models: Glove (GL), FastText (FT), DistiLBERT (DB) and RoBERTa (RB) and and union of both feature types (feature group III).
+
+
+Feature Group | Feature Set | ML classifier | Replies | Likes | Retweets
+-- | -- | -- | -- | -- | --
+I | S | GB | 0.5 | 0.558 | 0.532
+I | S | RF | 0.502 | 0.572 | 0.54
+I | S | R | 0.489 | 0.523 | 0.522
+II | FT | GB | 0.533 | 0.592 | 0.611
+II | FT | RF | 0.541 | 0.592 | 0.606
+II | FT | R | 0.542 | 0.589 | 0.611
+II | GL | GB | 0.534 | 0.604 | 0.61
+II | GL | RF | 0.537 | 0.618 | 0.604
+II | GL | R | 0.526 | 0.602 | 0.601
+II | DB | GB | 0.553 | 0.62 | 0.613
+II | DB | RF | 0.558 | 0.628 | 0.61
+II | DB | R | 0.55 | 0.615 | 0.613
+II | RB | GB | 0.516 | 0.641 | 0.64
+II | RB | RF | 0.531 | 0.631 | 0.631
+II | RB | R | 0.526 | 0.626 | 0.627
+III | SFT | GB | 0.541 | 0.593 | 0.618
+III | SFT | RF | 0.54 | 0.593 | 0.607
+III | SFT | R | 0.546 | 0.596 | 0.616
+III | SGL | GB | 0.537 | 0.606 | 0.611
+III | SGL | RF | 0.54 | 0.616 | 0.604
+III | SGL | R | 0.532 | 0.61 | 0.609
+III | SDB | GB | 0.552 | 0.618 | 0.611
+III | SDB | RF | 0.557 | 0.626 | 0.609
+III | SDB | R | 0.556 | 0.622 | 0.612
+III | SRB | GB | 0.537 | 0.655 | 0.65
+III | SRB | RF | 0.531 | 0.631 | 0.637
+III | SRB | R | 0.536 | 0.633 | 0.637
+
+
 
 ## Installation if you wish to try our code:
 Please clone this repository and carry out all computation yourself or extract zipped files downloaded from "release" section to use tweet embeddings computed in our work.
