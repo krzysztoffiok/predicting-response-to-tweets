@@ -71,7 +71,7 @@ The first script uses machine_learning.py to carry out ML predictions for single
 
 <strong>Step 4: SHAP explanations</strong>
 Our work utilizes [SHapley Additive exPlanations (SHAP)](https://github.com/slundberg/shap) for computing explanations of machine learning models.
-If you wish to compute model explanations, please use the machine_learning.py file with commands described in the file, for example: "python3 machine_learning.py --target=likes --estimators=2 --language_model=structured  --ml_model=XBG --estimators=2 --mixed_features --shap_out"
+If you wish to compute model explanations, please use the machine_learning.py file with commands described in the file, for example: "python3 machine_learning.py --target=likes --estimators=250 --language_model=structured  --ml_model=XBG --mixed_features --shap_out"
 
 ## Acknowledgment
 This research was carried out as part of the N000141812559 ONR research grant.
