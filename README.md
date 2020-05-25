@@ -1,6 +1,8 @@
 This repository contains code, data and results for a research article entitled:
 
-"Predicting responses to tweets from the official @USNavy account"
+"Predicting volume of response to tweets posted by a single Twitter account"
+
+Krzysztof Fiok1, Waldemar Karwowski1, Edgar Gutierrez Franco1, and Tareq Ahram1
 
 1 University of Central Florida, Department of Industrial Engineering & Management Systems, Orlando, Florida, USA </br>
 
