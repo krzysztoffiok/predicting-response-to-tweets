@@ -11,6 +11,7 @@ import shap
 import random
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
+from sklearn.neural_network import MLPClassifier
 
 """
 Example use:
@@ -69,7 +70,8 @@ ml_model_selector = {
                              random_state=2020, n_estimators=_estimators),
     "RF": RandomForestClassifier(n_estimators=_estimators, max_depth=7, min_samples_split=2,
                                  min_samples_leaf=1, max_features='auto', n_jobs=-1, random_state=2020),
-    "Ridge": RidgeClassifier()
+    "Ridge": RidgeClassifier(),
+    "MLP": MLPClassifier(hidden_layer_sizes=(8, 8, 8), activation='relu', solver='adam', max_iter=2000)
 }
 
 # define timestamp as index

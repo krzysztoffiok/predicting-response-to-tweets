@@ -1,0 +1,680 @@
+NORMALITY:
+                                                        W      pval  normal
+replies_fasttext_False_XGBClassifier             0.926137  0.570275    True
+replies_fasttext_False_RandomForestClassifier    0.909668  0.465597    True
+replies_fasttext_False_RidgeClassifier           0.909668  0.465597    True
+replies_fasttext_False_MLPClassifier             0.917402  0.513321    True
+replies_glove_False_XGBClassifier                0.850354  0.195639    True
+replies_glove_False_RandomForestClassifier       0.920967  0.536197    True
+replies_glove_False_RidgeClassifier              0.920967  0.536197    True
+replies_glove_False_MLPClassifier                0.851071  0.197927    True
+replies_distilbert_False_XGBClassifier           0.972054  0.888265    True
+replies_distilbert_False_RandomForestClassifier  0.888423  0.349234    True
+replies_distilbert_False_RidgeClassifier         0.888423  0.349234    True
+replies_distilbert_False_MLPClassifier           0.964764  0.840704    True
+replies_roberta_False_XGBClassifier              0.874422  0.284795    True
+replies_roberta_False_RandomForestClassifier     0.913551  0.489219    True
+replies_roberta_False_RidgeClassifier            0.913551  0.489219    True
+replies_roberta_False_MLPClassifier              0.882839  0.322374    True
+replies_structured_False_XGBClassifier           0.918030  0.517312    True
+replies_structured_False_RandomForestClassifier  0.803252  0.086110    True
+replies_structured_False_RidgeClassifier         0.803252  0.086110    True
+replies_structured_False_MLPClassifier           0.987028  0.968287    True
+replies_roberta_True_XGBClassifier               0.951562  0.748340    True
+replies_roberta_True_RandomForestClassifier      0.913341  0.487926    True
+replies_roberta_True_RidgeClassifier             0.913341  0.487926    True
+replies_roberta_True_MLPClassifier               0.888813  0.351171    True
+replies_fasttext_True_XGBClassifier              0.909544  0.464857    True
+replies_fasttext_True_RandomForestClassifier     0.773993  0.048902   False
+replies_fasttext_True_RidgeClassifier            0.773993  0.048902   False
+replies_fasttext_True_MLPClassifier              0.886612  0.340353    True
+replies_glove_True_XGBClassifier                 0.852894  0.203842    True
+replies_glove_True_RandomForestClassifier        0.946054  0.708993    True
+replies_glove_True_RidgeClassifier               0.946054  0.708993    True
+replies_glove_True_MLPClassifier                 0.927187  0.577314    True
+replies_distilbert_True_XGBClassifier            0.987901  0.971836    True
+replies_distilbert_True_RandomForestClassifier   0.975668  0.910222    True
+replies_distilbert_True_RidgeClassifier          0.975668  0.910222    True
+replies_distilbert_True_MLPClassifier            0.981366  0.941795    True
+
+ ANOVA:
+                 sum_sq     df         F        PR(>F)
+C(treatments)  0.236106   35.0  8.815386  7.740333e-38
+Residual       0.661169  864.0       NaN           NaN
+
+ HSD Tukey:
+                                         Multiple Comparison of Means - Tukey HSD, FWER=0.05                                          
+======================================================================================================================================
+                     group1                                          group2                     meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------------------------------------------------------------------------------
+         replies_distilbert_False_MLPClassifier replies_distilbert_False_RandomForestClassifier   0.0342 0.0068  0.0041  0.0644   True
+         replies_distilbert_False_MLPClassifier        replies_distilbert_False_RidgeClassifier   0.0342 0.0068  0.0041  0.0644   True
+         replies_distilbert_False_MLPClassifier          replies_distilbert_False_XGBClassifier   0.0316 0.0261  0.0014  0.0617   True
+         replies_distilbert_False_MLPClassifier           replies_distilbert_True_MLPClassifier   0.0018    0.9 -0.0284  0.0319  False
+         replies_distilbert_False_MLPClassifier  replies_distilbert_True_RandomForestClassifier   0.0322  0.019  0.0021  0.0624   True
+         replies_distilbert_False_MLPClassifier         replies_distilbert_True_RidgeClassifier   0.0322  0.019  0.0021  0.0624   True
+         replies_distilbert_False_MLPClassifier           replies_distilbert_True_XGBClassifier   0.0271 0.1642  -0.003  0.0573  False
+         replies_distilbert_False_MLPClassifier            replies_fasttext_False_MLPClassifier   0.0133    0.9 -0.0168  0.0435  False
+         replies_distilbert_False_MLPClassifier   replies_fasttext_False_RandomForestClassifier    0.016    0.9 -0.0141  0.0461  False
+         replies_distilbert_False_MLPClassifier          replies_fasttext_False_RidgeClassifier    0.016    0.9 -0.0141  0.0461  False
+         replies_distilbert_False_MLPClassifier            replies_fasttext_False_XGBClassifier   0.0064    0.9 -0.0237  0.0366  False
+         replies_distilbert_False_MLPClassifier             replies_fasttext_True_MLPClassifier   0.0102    0.9 -0.0199  0.0404  False
+         replies_distilbert_False_MLPClassifier    replies_fasttext_True_RandomForestClassifier   0.0196 0.8145 -0.0106  0.0497  False
+         replies_distilbert_False_MLPClassifier           replies_fasttext_True_RidgeClassifier   0.0196 0.8145 -0.0106  0.0497  False
+         replies_distilbert_False_MLPClassifier             replies_fasttext_True_XGBClassifier   0.0131    0.9  -0.017  0.0432  False
+         replies_distilbert_False_MLPClassifier               replies_glove_False_MLPClassifier  -0.0091    0.9 -0.0392   0.021  False
+         replies_distilbert_False_MLPClassifier      replies_glove_False_RandomForestClassifier   0.0162    0.9 -0.0139  0.0464  False
+         replies_distilbert_False_MLPClassifier             replies_glove_False_RidgeClassifier   0.0162    0.9 -0.0139  0.0464  False
+         replies_distilbert_False_MLPClassifier               replies_glove_False_XGBClassifier   0.0107    0.9 -0.0194  0.0408  False
+         replies_distilbert_False_MLPClassifier                replies_glove_True_MLPClassifier   0.0056    0.9 -0.0246  0.0357  False
+         replies_distilbert_False_MLPClassifier       replies_glove_True_RandomForestClassifier   0.0142    0.9 -0.0159  0.0444  False
+         replies_distilbert_False_MLPClassifier              replies_glove_True_RidgeClassifier   0.0142    0.9 -0.0159  0.0444  False
+         replies_distilbert_False_MLPClassifier                replies_glove_True_XGBClassifier   0.0149    0.9 -0.0152   0.045  False
+         replies_distilbert_False_MLPClassifier             replies_roberta_False_MLPClassifier  -0.0002    0.9 -0.0304  0.0299  False
+         replies_distilbert_False_MLPClassifier    replies_roberta_False_RandomForestClassifier   0.0051    0.9  -0.025  0.0352  False
+         replies_distilbert_False_MLPClassifier           replies_roberta_False_RidgeClassifier   0.0051    0.9  -0.025  0.0352  False
+         replies_distilbert_False_MLPClassifier             replies_roberta_False_XGBClassifier  -0.0054    0.9 -0.0355  0.0248  False
+         replies_distilbert_False_MLPClassifier              replies_roberta_True_MLPClassifier   0.0093    0.9 -0.0208  0.0394  False
+         replies_distilbert_False_MLPClassifier     replies_roberta_True_RandomForestClassifier   0.0073    0.9 -0.0228  0.0374  False
+         replies_distilbert_False_MLPClassifier            replies_roberta_True_RidgeClassifier   0.0073    0.9 -0.0228  0.0374  False
+         replies_distilbert_False_MLPClassifier              replies_roberta_True_XGBClassifier   0.0147    0.9 -0.0155  0.0448  False
+         replies_distilbert_False_MLPClassifier          replies_structured_False_MLPClassifier  -0.0309 0.0355  -0.061 -0.0008   True
+         replies_distilbert_False_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0218 0.6205 -0.0519  0.0083  False
+         replies_distilbert_False_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0218 0.6205 -0.0519  0.0083  False
+         replies_distilbert_False_MLPClassifier          replies_structured_False_XGBClassifier   -0.028 0.1191 -0.0582  0.0021  False
+replies_distilbert_False_RandomForestClassifier        replies_distilbert_False_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+replies_distilbert_False_RandomForestClassifier          replies_distilbert_False_XGBClassifier  -0.0027    0.9 -0.0328  0.0275  False
+replies_distilbert_False_RandomForestClassifier           replies_distilbert_True_MLPClassifier  -0.0325  0.017 -0.0626 -0.0023   True
+replies_distilbert_False_RandomForestClassifier  replies_distilbert_True_RandomForestClassifier   -0.002    0.9 -0.0321  0.0281  False
+replies_distilbert_False_RandomForestClassifier         replies_distilbert_True_RidgeClassifier   -0.002    0.9 -0.0321  0.0281  False
+replies_distilbert_False_RandomForestClassifier           replies_distilbert_True_XGBClassifier  -0.0071    0.9 -0.0372   0.023  False
+replies_distilbert_False_RandomForestClassifier            replies_fasttext_False_MLPClassifier  -0.0209 0.6982  -0.051  0.0092  False
+replies_distilbert_False_RandomForestClassifier   replies_fasttext_False_RandomForestClassifier  -0.0182    0.9 -0.0484  0.0119  False
+replies_distilbert_False_RandomForestClassifier          replies_fasttext_False_RidgeClassifier  -0.0182    0.9 -0.0484  0.0119  False
+replies_distilbert_False_RandomForestClassifier            replies_fasttext_False_XGBClassifier  -0.0278 0.1277 -0.0579  0.0023  False
+replies_distilbert_False_RandomForestClassifier             replies_fasttext_True_MLPClassifier   -0.024 0.4203 -0.0541  0.0061  False
+replies_distilbert_False_RandomForestClassifier    replies_fasttext_True_RandomForestClassifier  -0.0147    0.9 -0.0448  0.0155  False
+replies_distilbert_False_RandomForestClassifier           replies_fasttext_True_RidgeClassifier  -0.0147    0.9 -0.0448  0.0155  False
+replies_distilbert_False_RandomForestClassifier             replies_fasttext_True_XGBClassifier  -0.0211  0.679 -0.0513   0.009  False
+replies_distilbert_False_RandomForestClassifier               replies_glove_False_MLPClassifier  -0.0433  0.001 -0.0735 -0.0132   True
+replies_distilbert_False_RandomForestClassifier      replies_glove_False_RandomForestClassifier   -0.018    0.9 -0.0481  0.0121  False
+replies_distilbert_False_RandomForestClassifier             replies_glove_False_RidgeClassifier   -0.018    0.9 -0.0481  0.0121  False
+replies_distilbert_False_RandomForestClassifier               replies_glove_False_XGBClassifier  -0.0236 0.4663 -0.0537  0.0066  False
+replies_distilbert_False_RandomForestClassifier                replies_glove_True_MLPClassifier  -0.0287 0.0914 -0.0588  0.0015  False
+replies_distilbert_False_RandomForestClassifier       replies_glove_True_RandomForestClassifier    -0.02  0.776 -0.0501  0.0101  False
+replies_distilbert_False_RandomForestClassifier              replies_glove_True_RidgeClassifier    -0.02  0.776 -0.0501  0.0101  False
+replies_distilbert_False_RandomForestClassifier                replies_glove_True_XGBClassifier  -0.0193 0.8349 -0.0495  0.0108  False
+replies_distilbert_False_RandomForestClassifier             replies_roberta_False_MLPClassifier  -0.0345  0.006 -0.0646 -0.0043   True
+replies_distilbert_False_RandomForestClassifier    replies_roberta_False_RandomForestClassifier  -0.0291 0.0768 -0.0593   0.001  False
+replies_distilbert_False_RandomForestClassifier           replies_roberta_False_RidgeClassifier  -0.0291 0.0768 -0.0593   0.001  False
+replies_distilbert_False_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0396  0.001 -0.0697 -0.0095   True
+replies_distilbert_False_RandomForestClassifier              replies_roberta_True_MLPClassifier  -0.0249 0.3268 -0.0551  0.0052  False
+replies_distilbert_False_RandomForestClassifier     replies_roberta_True_RandomForestClassifier  -0.0269 0.1751 -0.0571  0.0032  False
+replies_distilbert_False_RandomForestClassifier            replies_roberta_True_RidgeClassifier  -0.0269 0.1751 -0.0571  0.0032  False
+replies_distilbert_False_RandomForestClassifier              replies_roberta_True_XGBClassifier  -0.0196 0.8131 -0.0497  0.0106  False
+replies_distilbert_False_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0651  0.001 -0.0953  -0.035   True
+replies_distilbert_False_RandomForestClassifier replies_structured_False_RandomForestClassifier   -0.056  0.001 -0.0862 -0.0259   True
+replies_distilbert_False_RandomForestClassifier        replies_structured_False_RidgeClassifier   -0.056  0.001 -0.0862 -0.0259   True
+replies_distilbert_False_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0623  0.001 -0.0924 -0.0321   True
+       replies_distilbert_False_RidgeClassifier          replies_distilbert_False_XGBClassifier  -0.0027    0.9 -0.0328  0.0275  False
+       replies_distilbert_False_RidgeClassifier           replies_distilbert_True_MLPClassifier  -0.0325  0.017 -0.0626 -0.0023   True
+       replies_distilbert_False_RidgeClassifier  replies_distilbert_True_RandomForestClassifier   -0.002    0.9 -0.0321  0.0281  False
+       replies_distilbert_False_RidgeClassifier         replies_distilbert_True_RidgeClassifier   -0.002    0.9 -0.0321  0.0281  False
+       replies_distilbert_False_RidgeClassifier           replies_distilbert_True_XGBClassifier  -0.0071    0.9 -0.0372   0.023  False
+       replies_distilbert_False_RidgeClassifier            replies_fasttext_False_MLPClassifier  -0.0209 0.6982  -0.051  0.0092  False
+       replies_distilbert_False_RidgeClassifier   replies_fasttext_False_RandomForestClassifier  -0.0182    0.9 -0.0484  0.0119  False
+       replies_distilbert_False_RidgeClassifier          replies_fasttext_False_RidgeClassifier  -0.0182    0.9 -0.0484  0.0119  False
+       replies_distilbert_False_RidgeClassifier            replies_fasttext_False_XGBClassifier  -0.0278 0.1277 -0.0579  0.0023  False
+       replies_distilbert_False_RidgeClassifier             replies_fasttext_True_MLPClassifier   -0.024 0.4203 -0.0541  0.0061  False
+       replies_distilbert_False_RidgeClassifier    replies_fasttext_True_RandomForestClassifier  -0.0147    0.9 -0.0448  0.0155  False
+       replies_distilbert_False_RidgeClassifier           replies_fasttext_True_RidgeClassifier  -0.0147    0.9 -0.0448  0.0155  False
+       replies_distilbert_False_RidgeClassifier             replies_fasttext_True_XGBClassifier  -0.0211  0.679 -0.0513   0.009  False
+       replies_distilbert_False_RidgeClassifier               replies_glove_False_MLPClassifier  -0.0433  0.001 -0.0735 -0.0132   True
+       replies_distilbert_False_RidgeClassifier      replies_glove_False_RandomForestClassifier   -0.018    0.9 -0.0481  0.0121  False
+       replies_distilbert_False_RidgeClassifier             replies_glove_False_RidgeClassifier   -0.018    0.9 -0.0481  0.0121  False
+       replies_distilbert_False_RidgeClassifier               replies_glove_False_XGBClassifier  -0.0236 0.4663 -0.0537  0.0066  False
+       replies_distilbert_False_RidgeClassifier                replies_glove_True_MLPClassifier  -0.0287 0.0914 -0.0588  0.0015  False
+       replies_distilbert_False_RidgeClassifier       replies_glove_True_RandomForestClassifier    -0.02  0.776 -0.0501  0.0101  False
+       replies_distilbert_False_RidgeClassifier              replies_glove_True_RidgeClassifier    -0.02  0.776 -0.0501  0.0101  False
+       replies_distilbert_False_RidgeClassifier                replies_glove_True_XGBClassifier  -0.0193 0.8349 -0.0495  0.0108  False
+       replies_distilbert_False_RidgeClassifier             replies_roberta_False_MLPClassifier  -0.0345  0.006 -0.0646 -0.0043   True
+       replies_distilbert_False_RidgeClassifier    replies_roberta_False_RandomForestClassifier  -0.0291 0.0768 -0.0593   0.001  False
+       replies_distilbert_False_RidgeClassifier           replies_roberta_False_RidgeClassifier  -0.0291 0.0768 -0.0593   0.001  False
+       replies_distilbert_False_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0396  0.001 -0.0697 -0.0095   True
+       replies_distilbert_False_RidgeClassifier              replies_roberta_True_MLPClassifier  -0.0249 0.3268 -0.0551  0.0052  False
+       replies_distilbert_False_RidgeClassifier     replies_roberta_True_RandomForestClassifier  -0.0269 0.1751 -0.0571  0.0032  False
+       replies_distilbert_False_RidgeClassifier            replies_roberta_True_RidgeClassifier  -0.0269 0.1751 -0.0571  0.0032  False
+       replies_distilbert_False_RidgeClassifier              replies_roberta_True_XGBClassifier  -0.0196 0.8131 -0.0497  0.0106  False
+       replies_distilbert_False_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0651  0.001 -0.0953  -0.035   True
+       replies_distilbert_False_RidgeClassifier replies_structured_False_RandomForestClassifier   -0.056  0.001 -0.0862 -0.0259   True
+       replies_distilbert_False_RidgeClassifier        replies_structured_False_RidgeClassifier   -0.056  0.001 -0.0862 -0.0259   True
+       replies_distilbert_False_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0623  0.001 -0.0924 -0.0321   True
+         replies_distilbert_False_XGBClassifier           replies_distilbert_True_MLPClassifier  -0.0298 0.0581 -0.0599  0.0003  False
+         replies_distilbert_False_XGBClassifier  replies_distilbert_True_RandomForestClassifier   0.0007    0.9 -0.0295  0.0308  False
+         replies_distilbert_False_XGBClassifier         replies_distilbert_True_RidgeClassifier   0.0007    0.9 -0.0295  0.0308  False
+         replies_distilbert_False_XGBClassifier           replies_distilbert_True_XGBClassifier  -0.0044    0.9 -0.0346  0.0257  False
+         replies_distilbert_False_XGBClassifier            replies_fasttext_False_MLPClassifier  -0.0182    0.9 -0.0484  0.0119  False
+         replies_distilbert_False_XGBClassifier   replies_fasttext_False_RandomForestClassifier  -0.0156    0.9 -0.0457  0.0146  False
+         replies_distilbert_False_XGBClassifier          replies_fasttext_False_RidgeClassifier  -0.0156    0.9 -0.0457  0.0146  False
+         replies_distilbert_False_XGBClassifier            replies_fasttext_False_XGBClassifier  -0.0251 0.3092 -0.0553   0.005  False
+         replies_distilbert_False_XGBClassifier             replies_fasttext_True_MLPClassifier  -0.0213 0.6598 -0.0515  0.0088  False
+         replies_distilbert_False_XGBClassifier    replies_fasttext_True_RandomForestClassifier   -0.012    0.9 -0.0421  0.0181  False
+         replies_distilbert_False_XGBClassifier           replies_fasttext_True_RidgeClassifier   -0.012    0.9 -0.0421  0.0181  False
+         replies_distilbert_False_XGBClassifier             replies_fasttext_True_XGBClassifier  -0.0185    0.9 -0.0486  0.0117  False
+         replies_distilbert_False_XGBClassifier               replies_glove_False_MLPClassifier  -0.0407  0.001 -0.0708 -0.0105   True
+         replies_distilbert_False_XGBClassifier      replies_glove_False_RandomForestClassifier  -0.0153    0.9 -0.0455  0.0148  False
+         replies_distilbert_False_XGBClassifier             replies_glove_False_RidgeClassifier  -0.0153    0.9 -0.0455  0.0148  False
+         replies_distilbert_False_XGBClassifier               replies_glove_False_XGBClassifier  -0.0209 0.6996  -0.051  0.0092  False
+         replies_distilbert_False_XGBClassifier                replies_glove_True_MLPClassifier   -0.026 0.2375 -0.0561  0.0041  False
+         replies_distilbert_False_XGBClassifier       replies_glove_True_RandomForestClassifier  -0.0173    0.9 -0.0475  0.0128  False
+         replies_distilbert_False_XGBClassifier              replies_glove_True_RidgeClassifier  -0.0173    0.9 -0.0475  0.0128  False
+         replies_distilbert_False_XGBClassifier                replies_glove_True_XGBClassifier  -0.0167    0.9 -0.0468  0.0135  False
+         replies_distilbert_False_XGBClassifier             replies_roberta_False_MLPClassifier  -0.0318 0.0233 -0.0619 -0.0017   True
+         replies_distilbert_False_XGBClassifier    replies_roberta_False_RandomForestClassifier  -0.0265  0.204 -0.0566  0.0037  False
+         replies_distilbert_False_XGBClassifier           replies_roberta_False_RidgeClassifier  -0.0265  0.204 -0.0566  0.0037  False
+         replies_distilbert_False_XGBClassifier             replies_roberta_False_XGBClassifier  -0.0369 0.0015 -0.0671 -0.0068   True
+         replies_distilbert_False_XGBClassifier              replies_roberta_True_MLPClassifier  -0.0223 0.5809 -0.0524  0.0079  False
+         replies_distilbert_False_XGBClassifier     replies_roberta_True_RandomForestClassifier  -0.0243  0.395 -0.0544  0.0059  False
+         replies_distilbert_False_XGBClassifier            replies_roberta_True_RidgeClassifier  -0.0243  0.395 -0.0544  0.0059  False
+         replies_distilbert_False_XGBClassifier              replies_roberta_True_XGBClassifier  -0.0169    0.9  -0.047  0.0132  False
+         replies_distilbert_False_XGBClassifier          replies_structured_False_MLPClassifier  -0.0625  0.001 -0.0926 -0.0323   True
+         replies_distilbert_False_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0534  0.001 -0.0835 -0.0232   True
+         replies_distilbert_False_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0534  0.001 -0.0835 -0.0232   True
+         replies_distilbert_False_XGBClassifier          replies_structured_False_XGBClassifier  -0.0596  0.001 -0.0897 -0.0295   True
+          replies_distilbert_True_MLPClassifier  replies_distilbert_True_RandomForestClassifier   0.0305 0.0434  0.0003  0.0606   True
+          replies_distilbert_True_MLPClassifier         replies_distilbert_True_RidgeClassifier   0.0305 0.0434  0.0003  0.0606   True
+          replies_distilbert_True_MLPClassifier           replies_distilbert_True_XGBClassifier   0.0253 0.2899 -0.0048  0.0555  False
+          replies_distilbert_True_MLPClassifier            replies_fasttext_False_MLPClassifier   0.0116    0.9 -0.0186  0.0417  False
+          replies_distilbert_True_MLPClassifier   replies_fasttext_False_RandomForestClassifier   0.0142    0.9 -0.0159  0.0444  False
+          replies_distilbert_True_MLPClassifier          replies_fasttext_False_RidgeClassifier   0.0142    0.9 -0.0159  0.0444  False
+          replies_distilbert_True_MLPClassifier            replies_fasttext_False_XGBClassifier   0.0047    0.9 -0.0255  0.0348  False
+          replies_distilbert_True_MLPClassifier             replies_fasttext_True_MLPClassifier   0.0085    0.9 -0.0217  0.0386  False
+          replies_distilbert_True_MLPClassifier    replies_fasttext_True_RandomForestClassifier   0.0178    0.9 -0.0123  0.0479  False
+          replies_distilbert_True_MLPClassifier           replies_fasttext_True_RidgeClassifier   0.0178    0.9 -0.0123  0.0479  False
+          replies_distilbert_True_MLPClassifier             replies_fasttext_True_XGBClassifier   0.0113    0.9 -0.0188  0.0415  False
+          replies_distilbert_True_MLPClassifier               replies_glove_False_MLPClassifier  -0.0109    0.9  -0.041  0.0192  False
+          replies_distilbert_True_MLPClassifier      replies_glove_False_RandomForestClassifier   0.0145    0.9 -0.0157  0.0446  False
+          replies_distilbert_True_MLPClassifier             replies_glove_False_RidgeClassifier   0.0145    0.9 -0.0157  0.0446  False
+          replies_distilbert_True_MLPClassifier               replies_glove_False_XGBClassifier   0.0089    0.9 -0.0212   0.039  False
+          replies_distilbert_True_MLPClassifier                replies_glove_True_MLPClassifier   0.0038    0.9 -0.0263  0.0339  False
+          replies_distilbert_True_MLPClassifier       replies_glove_True_RandomForestClassifier   0.0125    0.9 -0.0177  0.0426  False
+          replies_distilbert_True_MLPClassifier              replies_glove_True_RidgeClassifier   0.0125    0.9 -0.0177  0.0426  False
+          replies_distilbert_True_MLPClassifier                replies_glove_True_XGBClassifier   0.0131    0.9  -0.017  0.0433  False
+          replies_distilbert_True_MLPClassifier             replies_roberta_False_MLPClassifier   -0.002    0.9 -0.0321  0.0281  False
+          replies_distilbert_True_MLPClassifier    replies_roberta_False_RandomForestClassifier   0.0033    0.9 -0.0268  0.0335  False
+          replies_distilbert_True_MLPClassifier           replies_roberta_False_RidgeClassifier   0.0033    0.9 -0.0268  0.0335  False
+          replies_distilbert_True_MLPClassifier             replies_roberta_False_XGBClassifier  -0.0071    0.9 -0.0373   0.023  False
+          replies_distilbert_True_MLPClassifier              replies_roberta_True_MLPClassifier   0.0075    0.9 -0.0226  0.0377  False
+          replies_distilbert_True_MLPClassifier     replies_roberta_True_RandomForestClassifier   0.0055    0.9 -0.0246  0.0357  False
+          replies_distilbert_True_MLPClassifier            replies_roberta_True_RidgeClassifier   0.0055    0.9 -0.0246  0.0357  False
+          replies_distilbert_True_MLPClassifier              replies_roberta_True_XGBClassifier   0.0129    0.9 -0.0172   0.043  False
+          replies_distilbert_True_MLPClassifier          replies_structured_False_MLPClassifier  -0.0327 0.0152 -0.0628 -0.0025   True
+          replies_distilbert_True_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0236 0.4649 -0.0537  0.0066  False
+          replies_distilbert_True_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0236 0.4649 -0.0537  0.0066  False
+          replies_distilbert_True_MLPClassifier          replies_structured_False_XGBClassifier  -0.0298 0.0582 -0.0599  0.0003  False
+ replies_distilbert_True_RandomForestClassifier         replies_distilbert_True_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+ replies_distilbert_True_RandomForestClassifier           replies_distilbert_True_XGBClassifier  -0.0051    0.9 -0.0352   0.025  False
+ replies_distilbert_True_RandomForestClassifier            replies_fasttext_False_MLPClassifier  -0.0189 0.8718  -0.049  0.0112  False
+ replies_distilbert_True_RandomForestClassifier   replies_fasttext_False_RandomForestClassifier  -0.0162    0.9 -0.0464  0.0139  False
+ replies_distilbert_True_RandomForestClassifier          replies_fasttext_False_RidgeClassifier  -0.0162    0.9 -0.0464  0.0139  False
+ replies_distilbert_True_RandomForestClassifier            replies_fasttext_False_XGBClassifier  -0.0258 0.2534 -0.0559  0.0043  False
+ replies_distilbert_True_RandomForestClassifier             replies_fasttext_True_MLPClassifier   -0.022 0.6018 -0.0521  0.0081  False
+ replies_distilbert_True_RandomForestClassifier    replies_fasttext_True_RandomForestClassifier  -0.0127    0.9 -0.0428  0.0175  False
+ replies_distilbert_True_RandomForestClassifier           replies_fasttext_True_RidgeClassifier  -0.0127    0.9 -0.0428  0.0175  False
+ replies_distilbert_True_RandomForestClassifier             replies_fasttext_True_XGBClassifier  -0.0191 0.8526 -0.0493   0.011  False
+ replies_distilbert_True_RandomForestClassifier               replies_glove_False_MLPClassifier  -0.0413  0.001 -0.0715 -0.0112   True
+ replies_distilbert_True_RandomForestClassifier      replies_glove_False_RandomForestClassifier   -0.016    0.9 -0.0461  0.0141  False
+ replies_distilbert_True_RandomForestClassifier             replies_glove_False_RidgeClassifier   -0.016    0.9 -0.0461  0.0141  False
+ replies_distilbert_True_RandomForestClassifier               replies_glove_False_XGBClassifier  -0.0216 0.6416 -0.0517  0.0086  False
+ replies_distilbert_True_RandomForestClassifier                replies_glove_True_MLPClassifier  -0.0267 0.1909 -0.0568  0.0035  False
+ replies_distilbert_True_RandomForestClassifier       replies_glove_True_RandomForestClassifier   -0.018    0.9 -0.0481  0.0121  False
+ replies_distilbert_True_RandomForestClassifier              replies_glove_True_RidgeClassifier   -0.018    0.9 -0.0481  0.0121  False
+ replies_distilbert_True_RandomForestClassifier                replies_glove_True_XGBClassifier  -0.0173    0.9 -0.0475  0.0128  False
+ replies_distilbert_True_RandomForestClassifier             replies_roberta_False_MLPClassifier  -0.0325 0.0168 -0.0626 -0.0023   True
+ replies_distilbert_True_RandomForestClassifier    replies_roberta_False_RandomForestClassifier  -0.0271  0.163 -0.0573   0.003  False
+ replies_distilbert_True_RandomForestClassifier           replies_roberta_False_RidgeClassifier  -0.0271  0.163 -0.0573   0.003  False
+ replies_distilbert_True_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0376  0.001 -0.0677 -0.0075   True
+ replies_distilbert_True_RandomForestClassifier              replies_roberta_True_MLPClassifier  -0.0229 0.5229 -0.0531  0.0072  False
+ replies_distilbert_True_RandomForestClassifier     replies_roberta_True_RandomForestClassifier  -0.0249 0.3267 -0.0551  0.0052  False
+ replies_distilbert_True_RandomForestClassifier            replies_roberta_True_RidgeClassifier  -0.0249 0.3267 -0.0551  0.0052  False
+ replies_distilbert_True_RandomForestClassifier              replies_roberta_True_XGBClassifier  -0.0176    0.9 -0.0477  0.0126  False
+ replies_distilbert_True_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0631  0.001 -0.0933  -0.033   True
+ replies_distilbert_True_RandomForestClassifier replies_structured_False_RandomForestClassifier   -0.054  0.001 -0.0842 -0.0239   True
+ replies_distilbert_True_RandomForestClassifier        replies_structured_False_RidgeClassifier   -0.054  0.001 -0.0842 -0.0239   True
+ replies_distilbert_True_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0603  0.001 -0.0904 -0.0301   True
+        replies_distilbert_True_RidgeClassifier           replies_distilbert_True_XGBClassifier  -0.0051    0.9 -0.0352   0.025  False
+        replies_distilbert_True_RidgeClassifier            replies_fasttext_False_MLPClassifier  -0.0189 0.8718  -0.049  0.0112  False
+        replies_distilbert_True_RidgeClassifier   replies_fasttext_False_RandomForestClassifier  -0.0162    0.9 -0.0464  0.0139  False
+        replies_distilbert_True_RidgeClassifier          replies_fasttext_False_RidgeClassifier  -0.0162    0.9 -0.0464  0.0139  False
+        replies_distilbert_True_RidgeClassifier            replies_fasttext_False_XGBClassifier  -0.0258 0.2534 -0.0559  0.0043  False
+        replies_distilbert_True_RidgeClassifier             replies_fasttext_True_MLPClassifier   -0.022 0.6018 -0.0521  0.0081  False
+        replies_distilbert_True_RidgeClassifier    replies_fasttext_True_RandomForestClassifier  -0.0127    0.9 -0.0428  0.0175  False
+        replies_distilbert_True_RidgeClassifier           replies_fasttext_True_RidgeClassifier  -0.0127    0.9 -0.0428  0.0175  False
+        replies_distilbert_True_RidgeClassifier             replies_fasttext_True_XGBClassifier  -0.0191 0.8526 -0.0493   0.011  False
+        replies_distilbert_True_RidgeClassifier               replies_glove_False_MLPClassifier  -0.0413  0.001 -0.0715 -0.0112   True
+        replies_distilbert_True_RidgeClassifier      replies_glove_False_RandomForestClassifier   -0.016    0.9 -0.0461  0.0141  False
+        replies_distilbert_True_RidgeClassifier             replies_glove_False_RidgeClassifier   -0.016    0.9 -0.0461  0.0141  False
+        replies_distilbert_True_RidgeClassifier               replies_glove_False_XGBClassifier  -0.0216 0.6416 -0.0517  0.0086  False
+        replies_distilbert_True_RidgeClassifier                replies_glove_True_MLPClassifier  -0.0267 0.1909 -0.0568  0.0035  False
+        replies_distilbert_True_RidgeClassifier       replies_glove_True_RandomForestClassifier   -0.018    0.9 -0.0481  0.0121  False
+        replies_distilbert_True_RidgeClassifier              replies_glove_True_RidgeClassifier   -0.018    0.9 -0.0481  0.0121  False
+        replies_distilbert_True_RidgeClassifier                replies_glove_True_XGBClassifier  -0.0173    0.9 -0.0475  0.0128  False
+        replies_distilbert_True_RidgeClassifier             replies_roberta_False_MLPClassifier  -0.0325 0.0168 -0.0626 -0.0023   True
+        replies_distilbert_True_RidgeClassifier    replies_roberta_False_RandomForestClassifier  -0.0271  0.163 -0.0573   0.003  False
+        replies_distilbert_True_RidgeClassifier           replies_roberta_False_RidgeClassifier  -0.0271  0.163 -0.0573   0.003  False
+        replies_distilbert_True_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0376  0.001 -0.0677 -0.0075   True
+        replies_distilbert_True_RidgeClassifier              replies_roberta_True_MLPClassifier  -0.0229 0.5229 -0.0531  0.0072  False
+        replies_distilbert_True_RidgeClassifier     replies_roberta_True_RandomForestClassifier  -0.0249 0.3267 -0.0551  0.0052  False
+        replies_distilbert_True_RidgeClassifier            replies_roberta_True_RidgeClassifier  -0.0249 0.3267 -0.0551  0.0052  False
+        replies_distilbert_True_RidgeClassifier              replies_roberta_True_XGBClassifier  -0.0176    0.9 -0.0477  0.0126  False
+        replies_distilbert_True_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0631  0.001 -0.0933  -0.033   True
+        replies_distilbert_True_RidgeClassifier replies_structured_False_RandomForestClassifier   -0.054  0.001 -0.0842 -0.0239   True
+        replies_distilbert_True_RidgeClassifier        replies_structured_False_RidgeClassifier   -0.054  0.001 -0.0842 -0.0239   True
+        replies_distilbert_True_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0603  0.001 -0.0904 -0.0301   True
+          replies_distilbert_True_XGBClassifier            replies_fasttext_False_MLPClassifier  -0.0138    0.9 -0.0439  0.0163  False
+          replies_distilbert_True_XGBClassifier   replies_fasttext_False_RandomForestClassifier  -0.0111    0.9 -0.0412   0.019  False
+          replies_distilbert_True_XGBClassifier          replies_fasttext_False_RidgeClassifier  -0.0111    0.9 -0.0412   0.019  False
+          replies_distilbert_True_XGBClassifier            replies_fasttext_False_XGBClassifier  -0.0207 0.7176 -0.0508  0.0095  False
+          replies_distilbert_True_XGBClassifier             replies_fasttext_True_MLPClassifier  -0.0169    0.9  -0.047  0.0132  False
+          replies_distilbert_True_XGBClassifier    replies_fasttext_True_RandomForestClassifier  -0.0076    0.9 -0.0377  0.0226  False
+          replies_distilbert_True_XGBClassifier           replies_fasttext_True_RidgeClassifier  -0.0076    0.9 -0.0377  0.0226  False
+          replies_distilbert_True_XGBClassifier             replies_fasttext_True_XGBClassifier   -0.014    0.9 -0.0441  0.0161  False
+          replies_distilbert_True_XGBClassifier               replies_glove_False_MLPClassifier  -0.0362 0.0023 -0.0664 -0.0061   True
+          replies_distilbert_True_XGBClassifier      replies_glove_False_RandomForestClassifier  -0.0109    0.9  -0.041  0.0192  False
+          replies_distilbert_True_XGBClassifier             replies_glove_False_RidgeClassifier  -0.0109    0.9  -0.041  0.0192  False
+          replies_distilbert_True_XGBClassifier               replies_glove_False_XGBClassifier  -0.0164    0.9 -0.0466  0.0137  False
+          replies_distilbert_True_XGBClassifier                replies_glove_True_MLPClassifier  -0.0216 0.6413 -0.0517  0.0086  False
+          replies_distilbert_True_XGBClassifier       replies_glove_True_RandomForestClassifier  -0.0129    0.9  -0.043  0.0172  False
+          replies_distilbert_True_XGBClassifier              replies_glove_True_RidgeClassifier  -0.0129    0.9  -0.043  0.0172  False
+          replies_distilbert_True_XGBClassifier                replies_glove_True_XGBClassifier  -0.0122    0.9 -0.0423  0.0179  False
+          replies_distilbert_True_XGBClassifier             replies_roberta_False_MLPClassifier  -0.0274 0.1503 -0.0575  0.0028  False
+          replies_distilbert_True_XGBClassifier    replies_roberta_False_RandomForestClassifier   -0.022 0.6002 -0.0522  0.0081  False
+          replies_distilbert_True_XGBClassifier           replies_roberta_False_RidgeClassifier   -0.022 0.6002 -0.0522  0.0081  False
+          replies_distilbert_True_XGBClassifier             replies_roberta_False_XGBClassifier  -0.0325 0.0168 -0.0626 -0.0023   True
+          replies_distilbert_True_XGBClassifier              replies_roberta_True_MLPClassifier  -0.0178    0.9 -0.0479  0.0123  False
+          replies_distilbert_True_XGBClassifier     replies_roberta_True_RandomForestClassifier  -0.0198 0.7932 -0.0499  0.0103  False
+          replies_distilbert_True_XGBClassifier            replies_roberta_True_RidgeClassifier  -0.0198 0.7932 -0.0499  0.0103  False
+          replies_distilbert_True_XGBClassifier              replies_roberta_True_XGBClassifier  -0.0125    0.9 -0.0426  0.0177  False
+          replies_distilbert_True_XGBClassifier          replies_structured_False_MLPClassifier   -0.058  0.001 -0.0882 -0.0279   True
+          replies_distilbert_True_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0489  0.001  -0.079 -0.0188   True
+          replies_distilbert_True_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0489  0.001  -0.079 -0.0188   True
+          replies_distilbert_True_XGBClassifier          replies_structured_False_XGBClassifier  -0.0551  0.001 -0.0853  -0.025   True
+           replies_fasttext_False_MLPClassifier   replies_fasttext_False_RandomForestClassifier   0.0027    0.9 -0.0275  0.0328  False
+           replies_fasttext_False_MLPClassifier          replies_fasttext_False_RidgeClassifier   0.0027    0.9 -0.0275  0.0328  False
+           replies_fasttext_False_MLPClassifier            replies_fasttext_False_XGBClassifier  -0.0069    0.9  -0.037  0.0232  False
+           replies_fasttext_False_MLPClassifier             replies_fasttext_True_MLPClassifier  -0.0031    0.9 -0.0332   0.027  False
+           replies_fasttext_False_MLPClassifier    replies_fasttext_True_RandomForestClassifier   0.0062    0.9 -0.0239  0.0364  False
+           replies_fasttext_False_MLPClassifier           replies_fasttext_True_RidgeClassifier   0.0062    0.9 -0.0239  0.0364  False
+           replies_fasttext_False_MLPClassifier             replies_fasttext_True_XGBClassifier  -0.0002    0.9 -0.0304  0.0299  False
+           replies_fasttext_False_MLPClassifier               replies_glove_False_MLPClassifier  -0.0224  0.564 -0.0526  0.0077  False
+           replies_fasttext_False_MLPClassifier      replies_glove_False_RandomForestClassifier   0.0029    0.9 -0.0272   0.033  False
+           replies_fasttext_False_MLPClassifier             replies_glove_False_RidgeClassifier   0.0029    0.9 -0.0272   0.033  False
+           replies_fasttext_False_MLPClassifier               replies_glove_False_XGBClassifier  -0.0027    0.9 -0.0328  0.0275  False
+           replies_fasttext_False_MLPClassifier                replies_glove_True_MLPClassifier  -0.0078    0.9 -0.0379  0.0224  False
+           replies_fasttext_False_MLPClassifier       replies_glove_True_RandomForestClassifier   0.0009    0.9 -0.0292   0.031  False
+           replies_fasttext_False_MLPClassifier              replies_glove_True_RidgeClassifier   0.0009    0.9 -0.0292   0.031  False
+           replies_fasttext_False_MLPClassifier                replies_glove_True_XGBClassifier   0.0016    0.9 -0.0286  0.0317  False
+           replies_fasttext_False_MLPClassifier             replies_roberta_False_MLPClassifier  -0.0136    0.9 -0.0437  0.0166  False
+           replies_fasttext_False_MLPClassifier    replies_roberta_False_RandomForestClassifier  -0.0082    0.9 -0.0384  0.0219  False
+           replies_fasttext_False_MLPClassifier           replies_roberta_False_RidgeClassifier  -0.0082    0.9 -0.0384  0.0219  False
+           replies_fasttext_False_MLPClassifier             replies_roberta_False_XGBClassifier  -0.0187 0.8897 -0.0488  0.0114  False
+           replies_fasttext_False_MLPClassifier              replies_roberta_True_MLPClassifier   -0.004    0.9 -0.0342  0.0261  False
+           replies_fasttext_False_MLPClassifier     replies_roberta_True_RandomForestClassifier   -0.006    0.9 -0.0362  0.0241  False
+           replies_fasttext_False_MLPClassifier            replies_roberta_True_RidgeClassifier   -0.006    0.9 -0.0362  0.0241  False
+           replies_fasttext_False_MLPClassifier              replies_roberta_True_XGBClassifier   0.0013    0.9 -0.0288  0.0315  False
+           replies_fasttext_False_MLPClassifier          replies_structured_False_MLPClassifier  -0.0442  0.001 -0.0744 -0.0141   True
+           replies_fasttext_False_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0351 0.0042 -0.0653  -0.005   True
+           replies_fasttext_False_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0351 0.0042 -0.0653  -0.005   True
+           replies_fasttext_False_MLPClassifier          replies_structured_False_XGBClassifier  -0.0414  0.001 -0.0715 -0.0112   True
+  replies_fasttext_False_RandomForestClassifier          replies_fasttext_False_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+  replies_fasttext_False_RandomForestClassifier            replies_fasttext_False_XGBClassifier  -0.0096    0.9 -0.0397  0.0206  False
+  replies_fasttext_False_RandomForestClassifier             replies_fasttext_True_MLPClassifier  -0.0058    0.9 -0.0359  0.0244  False
+  replies_fasttext_False_RandomForestClassifier    replies_fasttext_True_RandomForestClassifier   0.0036    0.9 -0.0266  0.0337  False
+  replies_fasttext_False_RandomForestClassifier           replies_fasttext_True_RidgeClassifier   0.0036    0.9 -0.0266  0.0337  False
+  replies_fasttext_False_RandomForestClassifier             replies_fasttext_True_XGBClassifier  -0.0029    0.9  -0.033  0.0272  False
+  replies_fasttext_False_RandomForestClassifier               replies_glove_False_MLPClassifier  -0.0251 0.3097 -0.0552   0.005  False
+  replies_fasttext_False_RandomForestClassifier      replies_glove_False_RandomForestClassifier   0.0002    0.9 -0.0299  0.0304  False
+  replies_fasttext_False_RandomForestClassifier             replies_glove_False_RidgeClassifier   0.0002    0.9 -0.0299  0.0304  False
+  replies_fasttext_False_RandomForestClassifier               replies_glove_False_XGBClassifier  -0.0053    0.9 -0.0355  0.0248  False
+  replies_fasttext_False_RandomForestClassifier                replies_glove_True_MLPClassifier  -0.0104    0.9 -0.0406  0.0197  False
+  replies_fasttext_False_RandomForestClassifier       replies_glove_True_RandomForestClassifier  -0.0018    0.9 -0.0319  0.0284  False
+  replies_fasttext_False_RandomForestClassifier              replies_glove_True_RidgeClassifier  -0.0018    0.9 -0.0319  0.0284  False
+  replies_fasttext_False_RandomForestClassifier                replies_glove_True_XGBClassifier  -0.0011    0.9 -0.0312   0.029  False
+  replies_fasttext_False_RandomForestClassifier             replies_roberta_False_MLPClassifier  -0.0162    0.9 -0.0464  0.0139  False
+  replies_fasttext_False_RandomForestClassifier    replies_roberta_False_RandomForestClassifier  -0.0109    0.9  -0.041  0.0192  False
+  replies_fasttext_False_RandomForestClassifier           replies_roberta_False_RidgeClassifier  -0.0109    0.9  -0.041  0.0192  False
+  replies_fasttext_False_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0214 0.6578 -0.0515  0.0088  False
+  replies_fasttext_False_RandomForestClassifier              replies_roberta_True_MLPClassifier  -0.0067    0.9 -0.0368  0.0234  False
+  replies_fasttext_False_RandomForestClassifier     replies_roberta_True_RandomForestClassifier  -0.0087    0.9 -0.0388  0.0214  False
+  replies_fasttext_False_RandomForestClassifier            replies_roberta_True_RidgeClassifier  -0.0087    0.9 -0.0388  0.0214  False
+  replies_fasttext_False_RandomForestClassifier              replies_roberta_True_XGBClassifier  -0.0013    0.9 -0.0315  0.0288  False
+  replies_fasttext_False_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0469  0.001  -0.077 -0.0168   True
+  replies_fasttext_False_RandomForestClassifier replies_structured_False_RandomForestClassifier  -0.0378  0.001 -0.0679 -0.0077   True
+  replies_fasttext_False_RandomForestClassifier        replies_structured_False_RidgeClassifier  -0.0378  0.001 -0.0679 -0.0077   True
+  replies_fasttext_False_RandomForestClassifier          replies_structured_False_XGBClassifier   -0.044  0.001 -0.0742 -0.0139   True
+         replies_fasttext_False_RidgeClassifier            replies_fasttext_False_XGBClassifier  -0.0096    0.9 -0.0397  0.0206  False
+         replies_fasttext_False_RidgeClassifier             replies_fasttext_True_MLPClassifier  -0.0058    0.9 -0.0359  0.0244  False
+         replies_fasttext_False_RidgeClassifier    replies_fasttext_True_RandomForestClassifier   0.0036    0.9 -0.0266  0.0337  False
+         replies_fasttext_False_RidgeClassifier           replies_fasttext_True_RidgeClassifier   0.0036    0.9 -0.0266  0.0337  False
+         replies_fasttext_False_RidgeClassifier             replies_fasttext_True_XGBClassifier  -0.0029    0.9  -0.033  0.0272  False
+         replies_fasttext_False_RidgeClassifier               replies_glove_False_MLPClassifier  -0.0251 0.3097 -0.0552   0.005  False
+         replies_fasttext_False_RidgeClassifier      replies_glove_False_RandomForestClassifier   0.0002    0.9 -0.0299  0.0304  False
+         replies_fasttext_False_RidgeClassifier             replies_glove_False_RidgeClassifier   0.0002    0.9 -0.0299  0.0304  False
+         replies_fasttext_False_RidgeClassifier               replies_glove_False_XGBClassifier  -0.0053    0.9 -0.0355  0.0248  False
+         replies_fasttext_False_RidgeClassifier                replies_glove_True_MLPClassifier  -0.0104    0.9 -0.0406  0.0197  False
+         replies_fasttext_False_RidgeClassifier       replies_glove_True_RandomForestClassifier  -0.0018    0.9 -0.0319  0.0284  False
+         replies_fasttext_False_RidgeClassifier              replies_glove_True_RidgeClassifier  -0.0018    0.9 -0.0319  0.0284  False
+         replies_fasttext_False_RidgeClassifier                replies_glove_True_XGBClassifier  -0.0011    0.9 -0.0312   0.029  False
+         replies_fasttext_False_RidgeClassifier             replies_roberta_False_MLPClassifier  -0.0162    0.9 -0.0464  0.0139  False
+         replies_fasttext_False_RidgeClassifier    replies_roberta_False_RandomForestClassifier  -0.0109    0.9  -0.041  0.0192  False
+         replies_fasttext_False_RidgeClassifier           replies_roberta_False_RidgeClassifier  -0.0109    0.9  -0.041  0.0192  False
+         replies_fasttext_False_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0214 0.6578 -0.0515  0.0088  False
+         replies_fasttext_False_RidgeClassifier              replies_roberta_True_MLPClassifier  -0.0067    0.9 -0.0368  0.0234  False
+         replies_fasttext_False_RidgeClassifier     replies_roberta_True_RandomForestClassifier  -0.0087    0.9 -0.0388  0.0214  False
+         replies_fasttext_False_RidgeClassifier            replies_roberta_True_RidgeClassifier  -0.0087    0.9 -0.0388  0.0214  False
+         replies_fasttext_False_RidgeClassifier              replies_roberta_True_XGBClassifier  -0.0013    0.9 -0.0315  0.0288  False
+         replies_fasttext_False_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0469  0.001  -0.077 -0.0168   True
+         replies_fasttext_False_RidgeClassifier replies_structured_False_RandomForestClassifier  -0.0378  0.001 -0.0679 -0.0077   True
+         replies_fasttext_False_RidgeClassifier        replies_structured_False_RidgeClassifier  -0.0378  0.001 -0.0679 -0.0077   True
+         replies_fasttext_False_RidgeClassifier          replies_structured_False_XGBClassifier   -0.044  0.001 -0.0742 -0.0139   True
+           replies_fasttext_False_XGBClassifier             replies_fasttext_True_MLPClassifier   0.0038    0.9 -0.0264  0.0339  False
+           replies_fasttext_False_XGBClassifier    replies_fasttext_True_RandomForestClassifier   0.0131    0.9  -0.017  0.0432  False
+           replies_fasttext_False_XGBClassifier           replies_fasttext_True_RidgeClassifier   0.0131    0.9  -0.017  0.0432  False
+           replies_fasttext_False_XGBClassifier             replies_fasttext_True_XGBClassifier   0.0067    0.9 -0.0235  0.0368  False
+           replies_fasttext_False_XGBClassifier               replies_glove_False_MLPClassifier  -0.0156    0.9 -0.0457  0.0146  False
+           replies_fasttext_False_XGBClassifier      replies_glove_False_RandomForestClassifier   0.0098    0.9 -0.0203  0.0399  False
+           replies_fasttext_False_XGBClassifier             replies_glove_False_RidgeClassifier   0.0098    0.9 -0.0203  0.0399  False
+           replies_fasttext_False_XGBClassifier               replies_glove_False_XGBClassifier   0.0042    0.9 -0.0259  0.0344  False
+           replies_fasttext_False_XGBClassifier                replies_glove_True_MLPClassifier  -0.0009    0.9  -0.031  0.0293  False
+           replies_fasttext_False_XGBClassifier       replies_glove_True_RandomForestClassifier   0.0078    0.9 -0.0223  0.0379  False
+           replies_fasttext_False_XGBClassifier              replies_glove_True_RidgeClassifier   0.0078    0.9 -0.0223  0.0379  False
+           replies_fasttext_False_XGBClassifier                replies_glove_True_XGBClassifier   0.0085    0.9 -0.0217  0.0386  False
+           replies_fasttext_False_XGBClassifier             replies_roberta_False_MLPClassifier  -0.0067    0.9 -0.0368  0.0234  False
+           replies_fasttext_False_XGBClassifier    replies_roberta_False_RandomForestClassifier  -0.0014    0.9 -0.0315  0.0288  False
+           replies_fasttext_False_XGBClassifier           replies_roberta_False_RidgeClassifier  -0.0014    0.9 -0.0315  0.0288  False
+           replies_fasttext_False_XGBClassifier             replies_roberta_False_XGBClassifier  -0.0118    0.9 -0.0419  0.0183  False
+           replies_fasttext_False_XGBClassifier              replies_roberta_True_MLPClassifier   0.0029    0.9 -0.0273   0.033  False
+           replies_fasttext_False_XGBClassifier     replies_roberta_True_RandomForestClassifier   0.0009    0.9 -0.0293   0.031  False
+           replies_fasttext_False_XGBClassifier            replies_roberta_True_RidgeClassifier   0.0009    0.9 -0.0293   0.031  False
+           replies_fasttext_False_XGBClassifier              replies_roberta_True_XGBClassifier   0.0082    0.9 -0.0219  0.0383  False
+           replies_fasttext_False_XGBClassifier          replies_structured_False_MLPClassifier  -0.0374 0.0012 -0.0675 -0.0072   True
+           replies_fasttext_False_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0282 0.1092 -0.0584  0.0019  False
+           replies_fasttext_False_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0282 0.1092 -0.0584  0.0019  False
+           replies_fasttext_False_XGBClassifier          replies_structured_False_XGBClassifier  -0.0345  0.006 -0.0646 -0.0043   True
+            replies_fasttext_True_MLPClassifier    replies_fasttext_True_RandomForestClassifier   0.0093    0.9 -0.0208  0.0395  False
+            replies_fasttext_True_MLPClassifier           replies_fasttext_True_RidgeClassifier   0.0093    0.9 -0.0208  0.0395  False
+            replies_fasttext_True_MLPClassifier             replies_fasttext_True_XGBClassifier   0.0029    0.9 -0.0272   0.033  False
+            replies_fasttext_True_MLPClassifier               replies_glove_False_MLPClassifier  -0.0193  0.834 -0.0495  0.0108  False
+            replies_fasttext_True_MLPClassifier      replies_glove_False_RandomForestClassifier    0.006    0.9 -0.0241  0.0361  False
+            replies_fasttext_True_MLPClassifier             replies_glove_False_RidgeClassifier    0.006    0.9 -0.0241  0.0361  False
+            replies_fasttext_True_MLPClassifier               replies_glove_False_XGBClassifier   0.0005    0.9 -0.0297  0.0306  False
+            replies_fasttext_True_MLPClassifier                replies_glove_True_MLPClassifier  -0.0047    0.9 -0.0348  0.0255  False
+            replies_fasttext_True_MLPClassifier       replies_glove_True_RandomForestClassifier    0.004    0.9 -0.0261  0.0341  False
+            replies_fasttext_True_MLPClassifier              replies_glove_True_RidgeClassifier    0.004    0.9 -0.0261  0.0341  False
+            replies_fasttext_True_MLPClassifier                replies_glove_True_XGBClassifier   0.0047    0.9 -0.0254  0.0348  False
+            replies_fasttext_True_MLPClassifier             replies_roberta_False_MLPClassifier  -0.0105    0.9 -0.0406  0.0197  False
+            replies_fasttext_True_MLPClassifier    replies_roberta_False_RandomForestClassifier  -0.0051    0.9 -0.0353   0.025  False
+            replies_fasttext_True_MLPClassifier           replies_roberta_False_RidgeClassifier  -0.0051    0.9 -0.0353   0.025  False
+            replies_fasttext_True_MLPClassifier             replies_roberta_False_XGBClassifier  -0.0156    0.9 -0.0457  0.0145  False
+            replies_fasttext_True_MLPClassifier              replies_roberta_True_MLPClassifier  -0.0009    0.9  -0.031  0.0292  False
+            replies_fasttext_True_MLPClassifier     replies_roberta_True_RandomForestClassifier  -0.0029    0.9  -0.033  0.0272  False
+            replies_fasttext_True_MLPClassifier            replies_roberta_True_RidgeClassifier  -0.0029    0.9  -0.033  0.0272  False
+            replies_fasttext_True_MLPClassifier              replies_roberta_True_XGBClassifier   0.0044    0.9 -0.0257  0.0346  False
+            replies_fasttext_True_MLPClassifier          replies_structured_False_MLPClassifier  -0.0411  0.001 -0.0713  -0.011   True
+            replies_fasttext_True_MLPClassifier replies_structured_False_RandomForestClassifier   -0.032  0.021 -0.0622 -0.0019   True
+            replies_fasttext_True_MLPClassifier        replies_structured_False_RidgeClassifier   -0.032  0.021 -0.0622 -0.0019   True
+            replies_fasttext_True_MLPClassifier          replies_structured_False_XGBClassifier  -0.0382  0.001 -0.0684 -0.0081   True
+   replies_fasttext_True_RandomForestClassifier           replies_fasttext_True_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+   replies_fasttext_True_RandomForestClassifier             replies_fasttext_True_XGBClassifier  -0.0064    0.9 -0.0366  0.0237  False
+   replies_fasttext_True_RandomForestClassifier               replies_glove_False_MLPClassifier  -0.0287 0.0913 -0.0588  0.0015  False
+   replies_fasttext_True_RandomForestClassifier      replies_glove_False_RandomForestClassifier  -0.0033    0.9 -0.0335  0.0268  False
+   replies_fasttext_True_RandomForestClassifier             replies_glove_False_RidgeClassifier  -0.0033    0.9 -0.0335  0.0268  False
+   replies_fasttext_True_RandomForestClassifier               replies_glove_False_XGBClassifier  -0.0089    0.9  -0.039  0.0213  False
+   replies_fasttext_True_RandomForestClassifier                replies_glove_True_MLPClassifier   -0.014    0.9 -0.0441  0.0161  False
+   replies_fasttext_True_RandomForestClassifier       replies_glove_True_RandomForestClassifier  -0.0053    0.9 -0.0355  0.0248  False
+   replies_fasttext_True_RandomForestClassifier              replies_glove_True_RidgeClassifier  -0.0053    0.9 -0.0355  0.0248  False
+   replies_fasttext_True_RandomForestClassifier                replies_glove_True_XGBClassifier  -0.0047    0.9 -0.0348  0.0255  False
+   replies_fasttext_True_RandomForestClassifier             replies_roberta_False_MLPClassifier  -0.0198 0.7934 -0.0499  0.0103  False
+   replies_fasttext_True_RandomForestClassifier    replies_roberta_False_RandomForestClassifier  -0.0145    0.9 -0.0446  0.0157  False
+   replies_fasttext_True_RandomForestClassifier           replies_roberta_False_RidgeClassifier  -0.0145    0.9 -0.0446  0.0157  False
+   replies_fasttext_True_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0249 0.3266 -0.0551  0.0052  False
+   replies_fasttext_True_RandomForestClassifier              replies_roberta_True_MLPClassifier  -0.0102    0.9 -0.0404  0.0199  False
+   replies_fasttext_True_RandomForestClassifier     replies_roberta_True_RandomForestClassifier  -0.0122    0.9 -0.0424  0.0179  False
+   replies_fasttext_True_RandomForestClassifier            replies_roberta_True_RidgeClassifier  -0.0122    0.9 -0.0424  0.0179  False
+   replies_fasttext_True_RandomForestClassifier              replies_roberta_True_XGBClassifier  -0.0049    0.9  -0.035  0.0252  False
+   replies_fasttext_True_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0505  0.001 -0.0806 -0.0203   True
+   replies_fasttext_True_RandomForestClassifier replies_structured_False_RandomForestClassifier  -0.0414  0.001 -0.0715 -0.0112   True
+   replies_fasttext_True_RandomForestClassifier        replies_structured_False_RidgeClassifier  -0.0414  0.001 -0.0715 -0.0112   True
+   replies_fasttext_True_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0476  0.001 -0.0777 -0.0174   True
+          replies_fasttext_True_RidgeClassifier             replies_fasttext_True_XGBClassifier  -0.0064    0.9 -0.0366  0.0237  False
+          replies_fasttext_True_RidgeClassifier               replies_glove_False_MLPClassifier  -0.0287 0.0913 -0.0588  0.0015  False
+          replies_fasttext_True_RidgeClassifier      replies_glove_False_RandomForestClassifier  -0.0033    0.9 -0.0335  0.0268  False
+          replies_fasttext_True_RidgeClassifier             replies_glove_False_RidgeClassifier  -0.0033    0.9 -0.0335  0.0268  False
+          replies_fasttext_True_RidgeClassifier               replies_glove_False_XGBClassifier  -0.0089    0.9  -0.039  0.0213  False
+          replies_fasttext_True_RidgeClassifier                replies_glove_True_MLPClassifier   -0.014    0.9 -0.0441  0.0161  False
+          replies_fasttext_True_RidgeClassifier       replies_glove_True_RandomForestClassifier  -0.0053    0.9 -0.0355  0.0248  False
+          replies_fasttext_True_RidgeClassifier              replies_glove_True_RidgeClassifier  -0.0053    0.9 -0.0355  0.0248  False
+          replies_fasttext_True_RidgeClassifier                replies_glove_True_XGBClassifier  -0.0047    0.9 -0.0348  0.0255  False
+          replies_fasttext_True_RidgeClassifier             replies_roberta_False_MLPClassifier  -0.0198 0.7934 -0.0499  0.0103  False
+          replies_fasttext_True_RidgeClassifier    replies_roberta_False_RandomForestClassifier  -0.0145    0.9 -0.0446  0.0157  False
+          replies_fasttext_True_RidgeClassifier           replies_roberta_False_RidgeClassifier  -0.0145    0.9 -0.0446  0.0157  False
+          replies_fasttext_True_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0249 0.3266 -0.0551  0.0052  False
+          replies_fasttext_True_RidgeClassifier              replies_roberta_True_MLPClassifier  -0.0102    0.9 -0.0404  0.0199  False
+          replies_fasttext_True_RidgeClassifier     replies_roberta_True_RandomForestClassifier  -0.0122    0.9 -0.0424  0.0179  False
+          replies_fasttext_True_RidgeClassifier            replies_roberta_True_RidgeClassifier  -0.0122    0.9 -0.0424  0.0179  False
+          replies_fasttext_True_RidgeClassifier              replies_roberta_True_XGBClassifier  -0.0049    0.9  -0.035  0.0252  False
+          replies_fasttext_True_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0505  0.001 -0.0806 -0.0203   True
+          replies_fasttext_True_RidgeClassifier replies_structured_False_RandomForestClassifier  -0.0414  0.001 -0.0715 -0.0112   True
+          replies_fasttext_True_RidgeClassifier        replies_structured_False_RidgeClassifier  -0.0414  0.001 -0.0715 -0.0112   True
+          replies_fasttext_True_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0476  0.001 -0.0777 -0.0174   True
+            replies_fasttext_True_XGBClassifier               replies_glove_False_MLPClassifier  -0.0222 0.5832 -0.0524  0.0079  False
+            replies_fasttext_True_XGBClassifier      replies_glove_False_RandomForestClassifier   0.0031    0.9  -0.027  0.0333  False
+            replies_fasttext_True_XGBClassifier             replies_glove_False_RidgeClassifier   0.0031    0.9  -0.027  0.0333  False
+            replies_fasttext_True_XGBClassifier               replies_glove_False_XGBClassifier  -0.0024    0.9 -0.0326  0.0277  False
+            replies_fasttext_True_XGBClassifier                replies_glove_True_MLPClassifier  -0.0075    0.9 -0.0377  0.0226  False
+            replies_fasttext_True_XGBClassifier       replies_glove_True_RandomForestClassifier   0.0011    0.9  -0.029  0.0312  False
+            replies_fasttext_True_XGBClassifier              replies_glove_True_RidgeClassifier   0.0011    0.9  -0.029  0.0312  False
+            replies_fasttext_True_XGBClassifier                replies_glove_True_XGBClassifier   0.0018    0.9 -0.0283  0.0319  False
+            replies_fasttext_True_XGBClassifier             replies_roberta_False_MLPClassifier  -0.0134    0.9 -0.0435  0.0168  False
+            replies_fasttext_True_XGBClassifier    replies_roberta_False_RandomForestClassifier   -0.008    0.9 -0.0382  0.0221  False
+            replies_fasttext_True_XGBClassifier           replies_roberta_False_RidgeClassifier   -0.008    0.9 -0.0382  0.0221  False
+            replies_fasttext_True_XGBClassifier             replies_roberta_False_XGBClassifier  -0.0185    0.9 -0.0486  0.0117  False
+            replies_fasttext_True_XGBClassifier              replies_roberta_True_MLPClassifier  -0.0038    0.9 -0.0339  0.0263  False
+            replies_fasttext_True_XGBClassifier     replies_roberta_True_RandomForestClassifier  -0.0058    0.9 -0.0359  0.0243  False
+            replies_fasttext_True_XGBClassifier            replies_roberta_True_RidgeClassifier  -0.0058    0.9 -0.0359  0.0243  False
+            replies_fasttext_True_XGBClassifier              replies_roberta_True_XGBClassifier   0.0015    0.9 -0.0286  0.0317  False
+            replies_fasttext_True_XGBClassifier          replies_structured_False_MLPClassifier   -0.044  0.001 -0.0742 -0.0139   True
+            replies_fasttext_True_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0349 0.0047  -0.065 -0.0048   True
+            replies_fasttext_True_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0349 0.0047  -0.065 -0.0048   True
+            replies_fasttext_True_XGBClassifier          replies_structured_False_XGBClassifier  -0.0411  0.001 -0.0713  -0.011   True
+              replies_glove_False_MLPClassifier      replies_glove_False_RandomForestClassifier   0.0253 0.2902 -0.0048  0.0555  False
+              replies_glove_False_MLPClassifier             replies_glove_False_RidgeClassifier   0.0253 0.2902 -0.0048  0.0555  False
+              replies_glove_False_MLPClassifier               replies_glove_False_XGBClassifier   0.0198 0.7942 -0.0103  0.0499  False
+              replies_glove_False_MLPClassifier                replies_glove_True_MLPClassifier   0.0147    0.9 -0.0155  0.0448  False
+              replies_glove_False_MLPClassifier       replies_glove_True_RandomForestClassifier   0.0233 0.4858 -0.0068  0.0535  False
+              replies_glove_False_MLPClassifier              replies_glove_True_RidgeClassifier   0.0233 0.4858 -0.0068  0.0535  False
+              replies_glove_False_MLPClassifier                replies_glove_True_XGBClassifier    0.024 0.4192 -0.0061  0.0542  False
+              replies_glove_False_MLPClassifier             replies_roberta_False_MLPClassifier   0.0089    0.9 -0.0213   0.039  False
+              replies_glove_False_MLPClassifier    replies_roberta_False_RandomForestClassifier   0.0142    0.9 -0.0159  0.0443  False
+              replies_glove_False_MLPClassifier           replies_roberta_False_RidgeClassifier   0.0142    0.9 -0.0159  0.0443  False
+              replies_glove_False_MLPClassifier             replies_roberta_False_XGBClassifier   0.0038    0.9 -0.0264  0.0339  False
+              replies_glove_False_MLPClassifier              replies_roberta_True_MLPClassifier   0.0184    0.9 -0.0117  0.0486  False
+              replies_glove_False_MLPClassifier     replies_roberta_True_RandomForestClassifier   0.0164    0.9 -0.0137  0.0466  False
+              replies_glove_False_MLPClassifier            replies_roberta_True_RidgeClassifier   0.0164    0.9 -0.0137  0.0466  False
+              replies_glove_False_MLPClassifier              replies_roberta_True_XGBClassifier   0.0238  0.445 -0.0064  0.0539  False
+              replies_glove_False_MLPClassifier          replies_structured_False_MLPClassifier  -0.0218 0.6204 -0.0519  0.0083  False
+              replies_glove_False_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0127    0.9 -0.0428  0.0174  False
+              replies_glove_False_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0127    0.9 -0.0428  0.0174  False
+              replies_glove_False_MLPClassifier          replies_structured_False_XGBClassifier  -0.0189 0.8712  -0.049  0.0112  False
+     replies_glove_False_RandomForestClassifier             replies_glove_False_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+     replies_glove_False_RandomForestClassifier               replies_glove_False_XGBClassifier  -0.0056    0.9 -0.0357  0.0246  False
+     replies_glove_False_RandomForestClassifier                replies_glove_True_MLPClassifier  -0.0107    0.9 -0.0408  0.0195  False
+     replies_glove_False_RandomForestClassifier       replies_glove_True_RandomForestClassifier   -0.002    0.9 -0.0321  0.0281  False
+     replies_glove_False_RandomForestClassifier              replies_glove_True_RidgeClassifier   -0.002    0.9 -0.0321  0.0281  False
+     replies_glove_False_RandomForestClassifier                replies_glove_True_XGBClassifier  -0.0013    0.9 -0.0315  0.0288  False
+     replies_glove_False_RandomForestClassifier             replies_roberta_False_MLPClassifier  -0.0165    0.9 -0.0466  0.0137  False
+     replies_glove_False_RandomForestClassifier    replies_roberta_False_RandomForestClassifier  -0.0111    0.9 -0.0413   0.019  False
+     replies_glove_False_RandomForestClassifier           replies_roberta_False_RidgeClassifier  -0.0111    0.9 -0.0413   0.019  False
+     replies_glove_False_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0216 0.6379 -0.0517  0.0085  False
+     replies_glove_False_RandomForestClassifier              replies_roberta_True_MLPClassifier  -0.0069    0.9 -0.0371  0.0232  False
+     replies_glove_False_RandomForestClassifier     replies_roberta_True_RandomForestClassifier  -0.0089    0.9 -0.0391  0.0212  False
+     replies_glove_False_RandomForestClassifier            replies_roberta_True_RidgeClassifier  -0.0089    0.9 -0.0391  0.0212  False
+     replies_glove_False_RandomForestClassifier              replies_roberta_True_XGBClassifier  -0.0016    0.9 -0.0317  0.0286  False
+     replies_glove_False_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0471  0.001 -0.0773  -0.017   True
+     replies_glove_False_RandomForestClassifier replies_structured_False_RandomForestClassifier   -0.038  0.001 -0.0682 -0.0079   True
+     replies_glove_False_RandomForestClassifier        replies_structured_False_RidgeClassifier   -0.038  0.001 -0.0682 -0.0079   True
+     replies_glove_False_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0443  0.001 -0.0744 -0.0141   True
+            replies_glove_False_RidgeClassifier               replies_glove_False_XGBClassifier  -0.0056    0.9 -0.0357  0.0246  False
+            replies_glove_False_RidgeClassifier                replies_glove_True_MLPClassifier  -0.0107    0.9 -0.0408  0.0195  False
+            replies_glove_False_RidgeClassifier       replies_glove_True_RandomForestClassifier   -0.002    0.9 -0.0321  0.0281  False
+            replies_glove_False_RidgeClassifier              replies_glove_True_RidgeClassifier   -0.002    0.9 -0.0321  0.0281  False
+            replies_glove_False_RidgeClassifier                replies_glove_True_XGBClassifier  -0.0013    0.9 -0.0315  0.0288  False
+            replies_glove_False_RidgeClassifier             replies_roberta_False_MLPClassifier  -0.0165    0.9 -0.0466  0.0137  False
+            replies_glove_False_RidgeClassifier    replies_roberta_False_RandomForestClassifier  -0.0111    0.9 -0.0413   0.019  False
+            replies_glove_False_RidgeClassifier           replies_roberta_False_RidgeClassifier  -0.0111    0.9 -0.0413   0.019  False
+            replies_glove_False_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0216 0.6379 -0.0517  0.0085  False
+            replies_glove_False_RidgeClassifier              replies_roberta_True_MLPClassifier  -0.0069    0.9 -0.0371  0.0232  False
+            replies_glove_False_RidgeClassifier     replies_roberta_True_RandomForestClassifier  -0.0089    0.9 -0.0391  0.0212  False
+            replies_glove_False_RidgeClassifier            replies_roberta_True_RidgeClassifier  -0.0089    0.9 -0.0391  0.0212  False
+            replies_glove_False_RidgeClassifier              replies_roberta_True_XGBClassifier  -0.0016    0.9 -0.0317  0.0286  False
+            replies_glove_False_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0471  0.001 -0.0773  -0.017   True
+            replies_glove_False_RidgeClassifier replies_structured_False_RandomForestClassifier   -0.038  0.001 -0.0682 -0.0079   True
+            replies_glove_False_RidgeClassifier        replies_structured_False_RidgeClassifier   -0.038  0.001 -0.0682 -0.0079   True
+            replies_glove_False_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0443  0.001 -0.0744 -0.0141   True
+              replies_glove_False_XGBClassifier                replies_glove_True_MLPClassifier  -0.0051    0.9 -0.0352   0.025  False
+              replies_glove_False_XGBClassifier       replies_glove_True_RandomForestClassifier   0.0035    0.9 -0.0266  0.0337  False
+              replies_glove_False_XGBClassifier              replies_glove_True_RidgeClassifier   0.0035    0.9 -0.0266  0.0337  False
+              replies_glove_False_XGBClassifier                replies_glove_True_XGBClassifier   0.0042    0.9 -0.0259  0.0344  False
+              replies_glove_False_XGBClassifier             replies_roberta_False_MLPClassifier  -0.0109    0.9 -0.0411  0.0192  False
+              replies_glove_False_XGBClassifier    replies_roberta_False_RandomForestClassifier  -0.0056    0.9 -0.0357  0.0245  False
+              replies_glove_False_XGBClassifier           replies_roberta_False_RidgeClassifier  -0.0056    0.9 -0.0357  0.0245  False
+              replies_glove_False_XGBClassifier             replies_roberta_False_XGBClassifier   -0.016    0.9 -0.0462  0.0141  False
+              replies_glove_False_XGBClassifier              replies_roberta_True_MLPClassifier  -0.0014    0.9 -0.0315  0.0288  False
+              replies_glove_False_XGBClassifier     replies_roberta_True_RandomForestClassifier  -0.0034    0.9 -0.0335  0.0268  False
+              replies_glove_False_XGBClassifier            replies_roberta_True_RidgeClassifier  -0.0034    0.9 -0.0335  0.0268  False
+              replies_glove_False_XGBClassifier              replies_roberta_True_XGBClassifier    0.004    0.9 -0.0262  0.0341  False
+              replies_glove_False_XGBClassifier          replies_structured_False_MLPClassifier  -0.0416  0.001 -0.0717 -0.0115   True
+              replies_glove_False_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0325 0.0168 -0.0626 -0.0023   True
+              replies_glove_False_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0325 0.0168 -0.0626 -0.0023   True
+              replies_glove_False_XGBClassifier          replies_structured_False_XGBClassifier  -0.0387  0.001 -0.0688 -0.0086   True
+               replies_glove_True_MLPClassifier       replies_glove_True_RandomForestClassifier   0.0087    0.9 -0.0215  0.0388  False
+               replies_glove_True_MLPClassifier              replies_glove_True_RidgeClassifier   0.0087    0.9 -0.0215  0.0388  False
+               replies_glove_True_MLPClassifier                replies_glove_True_XGBClassifier   0.0093    0.9 -0.0208  0.0395  False
+               replies_glove_True_MLPClassifier             replies_roberta_False_MLPClassifier  -0.0058    0.9 -0.0359  0.0243  False
+               replies_glove_True_MLPClassifier    replies_roberta_False_RandomForestClassifier  -0.0005    0.9 -0.0306  0.0297  False
+               replies_glove_True_MLPClassifier           replies_roberta_False_RidgeClassifier  -0.0005    0.9 -0.0306  0.0297  False
+               replies_glove_True_MLPClassifier             replies_roberta_False_XGBClassifier  -0.0109    0.9 -0.0411  0.0192  False
+               replies_glove_True_MLPClassifier              replies_roberta_True_MLPClassifier   0.0038    0.9 -0.0264  0.0339  False
+               replies_glove_True_MLPClassifier     replies_roberta_True_RandomForestClassifier   0.0017    0.9 -0.0284  0.0319  False
+               replies_glove_True_MLPClassifier            replies_roberta_True_RidgeClassifier   0.0017    0.9 -0.0284  0.0319  False
+               replies_glove_True_MLPClassifier              replies_roberta_True_XGBClassifier   0.0091    0.9  -0.021  0.0392  False
+               replies_glove_True_MLPClassifier          replies_structured_False_MLPClassifier  -0.0365  0.002 -0.0666 -0.0063   True
+               replies_glove_True_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0274 0.1505 -0.0575  0.0028  False
+               replies_glove_True_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0274 0.1505 -0.0575  0.0028  False
+               replies_glove_True_MLPClassifier          replies_structured_False_XGBClassifier  -0.0336 0.0096 -0.0637 -0.0035   True
+      replies_glove_True_RandomForestClassifier              replies_glove_True_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+      replies_glove_True_RandomForestClassifier                replies_glove_True_XGBClassifier   0.0007    0.9 -0.0295  0.0308  False
+      replies_glove_True_RandomForestClassifier             replies_roberta_False_MLPClassifier  -0.0145    0.9 -0.0446  0.0157  False
+      replies_glove_True_RandomForestClassifier    replies_roberta_False_RandomForestClassifier  -0.0091    0.9 -0.0393   0.021  False
+      replies_glove_True_RandomForestClassifier           replies_roberta_False_RidgeClassifier  -0.0091    0.9 -0.0393   0.021  False
+      replies_glove_True_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0196 0.8118 -0.0497  0.0105  False
+      replies_glove_True_RandomForestClassifier              replies_roberta_True_MLPClassifier  -0.0049    0.9  -0.035  0.0252  False
+      replies_glove_True_RandomForestClassifier     replies_roberta_True_RandomForestClassifier  -0.0069    0.9  -0.037  0.0232  False
+      replies_glove_True_RandomForestClassifier            replies_roberta_True_RidgeClassifier  -0.0069    0.9  -0.037  0.0232  False
+      replies_glove_True_RandomForestClassifier              replies_roberta_True_XGBClassifier   0.0004    0.9 -0.0297  0.0306  False
+      replies_glove_True_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0451  0.001 -0.0753  -0.015   True
+      replies_glove_True_RandomForestClassifier replies_structured_False_RandomForestClassifier   -0.036 0.0025 -0.0662 -0.0059   True
+      replies_glove_True_RandomForestClassifier        replies_structured_False_RidgeClassifier   -0.036 0.0025 -0.0662 -0.0059   True
+      replies_glove_True_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0423  0.001 -0.0724 -0.0121   True
+             replies_glove_True_RidgeClassifier                replies_glove_True_XGBClassifier   0.0007    0.9 -0.0295  0.0308  False
+             replies_glove_True_RidgeClassifier             replies_roberta_False_MLPClassifier  -0.0145    0.9 -0.0446  0.0157  False
+             replies_glove_True_RidgeClassifier    replies_roberta_False_RandomForestClassifier  -0.0091    0.9 -0.0393   0.021  False
+             replies_glove_True_RidgeClassifier           replies_roberta_False_RidgeClassifier  -0.0091    0.9 -0.0393   0.021  False
+             replies_glove_True_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0196 0.8118 -0.0497  0.0105  False
+             replies_glove_True_RidgeClassifier              replies_roberta_True_MLPClassifier  -0.0049    0.9  -0.035  0.0252  False
+             replies_glove_True_RidgeClassifier     replies_roberta_True_RandomForestClassifier  -0.0069    0.9  -0.037  0.0232  False
+             replies_glove_True_RidgeClassifier            replies_roberta_True_RidgeClassifier  -0.0069    0.9  -0.037  0.0232  False
+             replies_glove_True_RidgeClassifier              replies_roberta_True_XGBClassifier   0.0004    0.9 -0.0297  0.0306  False
+             replies_glove_True_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0451  0.001 -0.0753  -0.015   True
+             replies_glove_True_RidgeClassifier replies_structured_False_RandomForestClassifier   -0.036 0.0025 -0.0662 -0.0059   True
+             replies_glove_True_RidgeClassifier        replies_structured_False_RidgeClassifier   -0.036 0.0025 -0.0662 -0.0059   True
+             replies_glove_True_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0423  0.001 -0.0724 -0.0121   True
+               replies_glove_True_XGBClassifier             replies_roberta_False_MLPClassifier  -0.0152    0.9 -0.0453   0.015  False
+               replies_glove_True_XGBClassifier    replies_roberta_False_RandomForestClassifier  -0.0098    0.9 -0.0399  0.0203  False
+               replies_glove_True_XGBClassifier           replies_roberta_False_RidgeClassifier  -0.0098    0.9 -0.0399  0.0203  False
+               replies_glove_True_XGBClassifier             replies_roberta_False_XGBClassifier  -0.0203  0.753 -0.0504  0.0099  False
+               replies_glove_True_XGBClassifier              replies_roberta_True_MLPClassifier  -0.0056    0.9 -0.0357  0.0245  False
+               replies_glove_True_XGBClassifier     replies_roberta_True_RandomForestClassifier  -0.0076    0.9 -0.0377  0.0225  False
+               replies_glove_True_XGBClassifier            replies_roberta_True_RidgeClassifier  -0.0076    0.9 -0.0377  0.0225  False
+               replies_glove_True_XGBClassifier              replies_roberta_True_XGBClassifier  -0.0003    0.9 -0.0304  0.0299  False
+               replies_glove_True_XGBClassifier          replies_structured_False_MLPClassifier  -0.0458  0.001 -0.0759 -0.0157   True
+               replies_glove_True_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0367 0.0017 -0.0668 -0.0066   True
+               replies_glove_True_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0367 0.0017 -0.0668 -0.0066   True
+               replies_glove_True_XGBClassifier          replies_structured_False_XGBClassifier  -0.0429  0.001 -0.0731 -0.0128   True
+            replies_roberta_False_MLPClassifier    replies_roberta_False_RandomForestClassifier   0.0053    0.9 -0.0248  0.0355  False
+            replies_roberta_False_MLPClassifier           replies_roberta_False_RidgeClassifier   0.0053    0.9 -0.0248  0.0355  False
+            replies_roberta_False_MLPClassifier             replies_roberta_False_XGBClassifier  -0.0051    0.9 -0.0352   0.025  False
+            replies_roberta_False_MLPClassifier              replies_roberta_True_MLPClassifier   0.0096    0.9 -0.0206  0.0397  False
+            replies_roberta_False_MLPClassifier     replies_roberta_True_RandomForestClassifier   0.0076    0.9 -0.0226  0.0377  False
+            replies_roberta_False_MLPClassifier            replies_roberta_True_RidgeClassifier   0.0076    0.9 -0.0226  0.0377  False
+            replies_roberta_False_MLPClassifier              replies_roberta_True_XGBClassifier   0.0149    0.9 -0.0152   0.045  False
+            replies_roberta_False_MLPClassifier          replies_structured_False_MLPClassifier  -0.0307 0.0397 -0.0608 -0.0005   True
+            replies_roberta_False_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0216 0.6416 -0.0517  0.0086  False
+            replies_roberta_False_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0216 0.6416 -0.0517  0.0086  False
+            replies_roberta_False_MLPClassifier          replies_structured_False_XGBClassifier  -0.0278 0.1284 -0.0579  0.0024  False
+   replies_roberta_False_RandomForestClassifier           replies_roberta_False_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+   replies_roberta_False_RandomForestClassifier             replies_roberta_False_XGBClassifier  -0.0105    0.9 -0.0406  0.0197  False
+   replies_roberta_False_RandomForestClassifier              replies_roberta_True_MLPClassifier   0.0042    0.9 -0.0259  0.0344  False
+   replies_roberta_False_RandomForestClassifier     replies_roberta_True_RandomForestClassifier   0.0022    0.9 -0.0279  0.0324  False
+   replies_roberta_False_RandomForestClassifier            replies_roberta_True_RidgeClassifier   0.0022    0.9 -0.0279  0.0324  False
+   replies_roberta_False_RandomForestClassifier              replies_roberta_True_XGBClassifier   0.0096    0.9 -0.0206  0.0397  False
+   replies_roberta_False_RandomForestClassifier          replies_structured_False_MLPClassifier   -0.036 0.0026 -0.0661 -0.0059   True
+   replies_roberta_False_RandomForestClassifier replies_structured_False_RandomForestClassifier  -0.0269 0.1771  -0.057  0.0032  False
+   replies_roberta_False_RandomForestClassifier        replies_structured_False_RidgeClassifier  -0.0269 0.1771  -0.057  0.0032  False
+   replies_roberta_False_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0331 0.0122 -0.0632  -0.003   True
+          replies_roberta_False_RidgeClassifier             replies_roberta_False_XGBClassifier  -0.0105    0.9 -0.0406  0.0197  False
+          replies_roberta_False_RidgeClassifier              replies_roberta_True_MLPClassifier   0.0042    0.9 -0.0259  0.0344  False
+          replies_roberta_False_RidgeClassifier     replies_roberta_True_RandomForestClassifier   0.0022    0.9 -0.0279  0.0324  False
+          replies_roberta_False_RidgeClassifier            replies_roberta_True_RidgeClassifier   0.0022    0.9 -0.0279  0.0324  False
+          replies_roberta_False_RidgeClassifier              replies_roberta_True_XGBClassifier   0.0096    0.9 -0.0206  0.0397  False
+          replies_roberta_False_RidgeClassifier          replies_structured_False_MLPClassifier   -0.036 0.0026 -0.0661 -0.0059   True
+          replies_roberta_False_RidgeClassifier replies_structured_False_RandomForestClassifier  -0.0269 0.1771  -0.057  0.0032  False
+          replies_roberta_False_RidgeClassifier        replies_structured_False_RidgeClassifier  -0.0269 0.1771  -0.057  0.0032  False
+          replies_roberta_False_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0331 0.0122 -0.0632  -0.003   True
+            replies_roberta_False_XGBClassifier              replies_roberta_True_MLPClassifier   0.0147    0.9 -0.0155  0.0448  False
+            replies_roberta_False_XGBClassifier     replies_roberta_True_RandomForestClassifier   0.0127    0.9 -0.0175  0.0428  False
+            replies_roberta_False_XGBClassifier            replies_roberta_True_RidgeClassifier   0.0127    0.9 -0.0175  0.0428  False
+            replies_roberta_False_XGBClassifier              replies_roberta_True_XGBClassifier     0.02 0.7748 -0.0101  0.0501  False
+            replies_roberta_False_XGBClassifier          replies_structured_False_MLPClassifier  -0.0255 0.2733 -0.0557  0.0046  False
+            replies_roberta_False_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0164    0.9 -0.0466  0.0137  False
+            replies_roberta_False_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0164    0.9 -0.0466  0.0137  False
+            replies_roberta_False_XGBClassifier          replies_structured_False_XGBClassifier  -0.0227 0.5455 -0.0528  0.0075  False
+             replies_roberta_True_MLPClassifier     replies_roberta_True_RandomForestClassifier   -0.002    0.9 -0.0321  0.0281  False
+             replies_roberta_True_MLPClassifier            replies_roberta_True_RidgeClassifier   -0.002    0.9 -0.0321  0.0281  False
+             replies_roberta_True_MLPClassifier              replies_roberta_True_XGBClassifier   0.0053    0.9 -0.0248  0.0355  False
+             replies_roberta_True_MLPClassifier          replies_structured_False_MLPClassifier  -0.0402  0.001 -0.0704 -0.0101   True
+             replies_roberta_True_MLPClassifier replies_structured_False_RandomForestClassifier  -0.0311 0.0323 -0.0612  -0.001   True
+             replies_roberta_True_MLPClassifier        replies_structured_False_RidgeClassifier  -0.0311 0.0323 -0.0612  -0.001   True
+             replies_roberta_True_MLPClassifier          replies_structured_False_XGBClassifier  -0.0373 0.0012 -0.0675 -0.0072   True
+    replies_roberta_True_RandomForestClassifier            replies_roberta_True_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+    replies_roberta_True_RandomForestClassifier              replies_roberta_True_XGBClassifier   0.0073    0.9 -0.0228  0.0375  False
+    replies_roberta_True_RandomForestClassifier          replies_structured_False_MLPClassifier  -0.0382  0.001 -0.0684 -0.0081   True
+    replies_roberta_True_RandomForestClassifier replies_structured_False_RandomForestClassifier  -0.0291 0.0778 -0.0592   0.001  False
+    replies_roberta_True_RandomForestClassifier        replies_structured_False_RidgeClassifier  -0.0291 0.0778 -0.0592   0.001  False
+    replies_roberta_True_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0353 0.0038 -0.0655 -0.0052   True
+           replies_roberta_True_RidgeClassifier              replies_roberta_True_XGBClassifier   0.0073    0.9 -0.0228  0.0375  False
+           replies_roberta_True_RidgeClassifier          replies_structured_False_MLPClassifier  -0.0382  0.001 -0.0684 -0.0081   True
+           replies_roberta_True_RidgeClassifier replies_structured_False_RandomForestClassifier  -0.0291 0.0778 -0.0592   0.001  False
+           replies_roberta_True_RidgeClassifier        replies_structured_False_RidgeClassifier  -0.0291 0.0778 -0.0592   0.001  False
+           replies_roberta_True_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0353 0.0038 -0.0655 -0.0052   True
+             replies_roberta_True_XGBClassifier          replies_structured_False_MLPClassifier  -0.0456  0.001 -0.0757 -0.0154   True
+             replies_roberta_True_XGBClassifier replies_structured_False_RandomForestClassifier  -0.0365  0.002 -0.0666 -0.0063   True
+             replies_roberta_True_XGBClassifier        replies_structured_False_RidgeClassifier  -0.0365  0.002 -0.0666 -0.0063   True
+             replies_roberta_True_XGBClassifier          replies_structured_False_XGBClassifier  -0.0427  0.001 -0.0728 -0.0125   True
+         replies_structured_False_MLPClassifier replies_structured_False_RandomForestClassifier   0.0091    0.9  -0.021  0.0392  False
+         replies_structured_False_MLPClassifier        replies_structured_False_RidgeClassifier   0.0091    0.9  -0.021  0.0392  False
+         replies_structured_False_MLPClassifier          replies_structured_False_XGBClassifier   0.0029    0.9 -0.0272   0.033  False
+replies_structured_False_RandomForestClassifier        replies_structured_False_RidgeClassifier      0.0    0.9 -0.0301  0.0301  False
+replies_structured_False_RandomForestClassifier          replies_structured_False_XGBClassifier  -0.0062    0.9 -0.0364  0.0239  False
+       replies_structured_False_RidgeClassifier          replies_structured_False_XGBClassifier  -0.0062    0.9 -0.0364  0.0239  False
+--------------------------------------------------------------------------------------------------------------------------------------
