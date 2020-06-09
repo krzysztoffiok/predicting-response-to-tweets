@@ -1,0 +1,81 @@
+declare -a model=('retweets')
+
+# compute training times
+start=`date +%s`
+for i in "${model[@]}"; do python3 model_train.py --test_run='fasttext' --model="$i"; done
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./fasttext_training_time.txt
+echo $runtime > $destdir
+
+start=`date +%s`
+for i in "${model[@]}"; do python3 model_train.py --test_run='glove' --model="$i"; done
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./glove_training_time.txt
+echo $runtime > $destdir
+
+start=`date +%s`
+for i in "${model[@]}"; do python3 model_train.py --test_run='distilbert' --model="$i"; done
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./distilbert_training_time.txt
+echo $runtime > $destdir
+
+start=`date +%s`
+for i in "${model[@]}"; do python3 model_train.py --test_run='roberta' --model="$i"; done
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./roberta_training_time.txt
+echo $runtime > $destdir
+
+
+# compute embedding times
+start=`date +%s`
+python3 embed_sentences_flair.py --test_run='fasttext' --model='retweets' --fold=0
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./fasttext_embed_time.txt
+echo $runtime > $destdir
+
+start=`date +%s`
+python3 embed_sentences_flair.py --test_run='glove' --model='retweets' --fold=0
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./glove_embed_time.txt
+echo $runtime > $destdir
+
+start=`date +%s`
+python3 embed_sentences_flair.py --test_run='distilbert' --model='retweets' --fold=0
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./distilbert_embed_time.txt
+echo $runtime > $destdir
+
+start=`date +%s`
+python3 embed_sentences_flair.py --test_run='roberta' --model='retweets' --fold=0
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./roberta_embed_time.txt
+echo $runtime > $destdir
+
+# compute machine learning time
+start=`date +%s`
+declare -a targets=('retweets' 'likes' 'replies')
+
+for i in "${targets[@]}"; do python3 machine_learning.py --target="$i" \
+--language_model=all --ml_model=all --estimators=250;
+end=`date +%s`
+runtime=$((end-start))
+echo $runtime
+destdir=./ML_total_time.txt
+echo $runtime > $destdir
+done

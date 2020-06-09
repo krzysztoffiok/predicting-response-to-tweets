@@ -4,6 +4,8 @@ import numpy as np
 # import flair
 # import torch
 import datatable
+import time
+import math
 
 """ example use to create tweet-level embeddings
 
@@ -40,19 +42,50 @@ from flair.data import Sentence
 model = TextClassifier.load(f'./data/model_{model_type}_{fold}/_{test_run}_best-model.pt')
 document_embeddings = model.document_embeddings
 
-# prepare df for output csv
-hidden_size = document_embeddings.embedding_length
-columns = [x for x in range(hidden_size)]
-df = pd.DataFrame(columns=[columns])
+# prepare df for output to csv
+# batch size for embedding tweet instances
+bs = 32
+tweets_to_embed = data['sentence'].copy()
+print("beginning embedding")
 
-for num, sent in enumerate(data['sentence']):
-    # prepare each tweet for flair tokenized format
-    sentence = Sentence(sent, use_tokenizer=True)
-    # embed sentence
-    document_embeddings.embed(sentence)
-    sent_emb = sentence.get_embedding()
-    # add new row to df
-    df.loc[num] = sent_emb.squeeze().tolist()
+# prepare mini batches
+low_limits = list()
+for x in range(0, len(tweets_to_embed), bs):
+    low_limits.append(x)
+up_limits = [x + bs for x in low_limits[:-1]]
+up_limits.append(len(tweets_to_embed))
+
+# a placeholder for embedded tweets and time of computation
+newEmbedings = list()
+embedding_times = list()
+
+# embeddings tweets
+for i in range(len(low_limits)):
+    it = time.time()
+    print(f"batch {math.ceil(up_limits[i] / bs)}")
+    # get the list of current tweet instances
+    slist = tweets_to_embed.iloc[low_limits[i]:up_limits[i]].to_list()
+
+    # create a list of Sentence objects
+    sentlist = list()
+    for sent in slist:
+        sentlist.append(Sentence(sent, use_tokenizer=True))
+
+    # feed the list of Sentence objects to the model and output embeddings
+    document_embeddings.embed(sentlist)
+
+    # add embeddings of sentences to a new data frame
+    for num, sentence in enumerate(sentlist):
+        sent_emb = sentence.get_embedding()
+        newEmbedings.append(sent_emb.squeeze().tolist())
+
+    ft = time.time()
+    embedding_times.append((ft - it) / bs)
+
+print("Average tweet embedding time: ", np.array(embedding_times).mean())
+print("Total tweet embedding time: ", len(tweets_to_embed)*np.array(embedding_times).mean())
+# save all embeddings in a DataFrame
+df = pd.DataFrame(newEmbedings)
 
 # add rows with target variable and dummy_id for identification of rows
 df = df.astype(np.float16)
