@@ -4,7 +4,7 @@ This repository contains code, data and results for a research article entitled:
 
 Krzysztof Fiok 1, Waldemar Karwowski 1, Edgar Gutierrez Franco 1,2, and Tareq Ahram 1
 
-1 Department of Industrial Engineering and Management Systems, University of Central Florida, Orlando, FL 32816, USA
+1 Department of Industrial Engineering and Management Systems, University of Central Florida, Orlando, FL 32816, USA </br>
 2 Center for Latin-American Logistics Innovation, LOGyCA, Bogota 110111, Colombia
 
 Symmetry 2020, 12(6), 1054; https://doi.org/10.3390/sym12061054
