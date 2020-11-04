@@ -2,11 +2,12 @@ This repository contains code, data and results for a research article entitled:
 
 "Predicting volume of response to tweets posted by a single Twitter account"
 
-Krzysztof Fiok1, Waldemar Karwowski1, Edgar Gutierrez Franco1, and Tareq Ahram1
+Krzysztof Fiok 1, Waldemar Karwowski 1, Edgar Gutierrez Franco 1,2, and Tareq Ahram 1
 
-1 University of Central Florida, Department of Industrial Engineering & Management Systems, Orlando, Florida, USA </br>
+1 Department of Industrial Engineering and Management Systems, University of Central Florida, Orlando, FL 32816, USA
+2 Center for Latin-American Logistics Innovation, LOGyCA, Bogota 110111, Colombia
 
-In due course full description of usage will appear here.
+Symmetry 2020, 12(6), 1054; https://doi.org/10.3390/sym12061054
 
 The code is written in Python3 and requires GPU computing machine for achieving reasonable performance.
 
@@ -88,4 +89,4 @@ This research was carried out as part of the N000141812559 ONR research grant.
 
 ## Citation:<br/>
 If you decide to use here published code or our dataset please cite our work in the following manner:
-(please contact us directly at this time since the paper is still in preparation).
+Fiok, K., Karwowski, W., Gutierrez, E., & Ahram, T. (2020). Predicting the Volume of Response to Tweets Posted by a Single Twitter Account. Symmetry, 12(6), 1054.
